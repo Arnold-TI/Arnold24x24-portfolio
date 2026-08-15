@@ -33,6 +33,44 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+@keyframes bubble-rise {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-130vh);
+  }
+}
+
+@keyframes bubble-wobble {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(var(--wobble));
+  }
+  75% {
+    transform: translateX(calc(var(--wobble) * -1));
+  }
+}
+
+.bubble-rise {
+  position: absolute;
+  bottom: -10%;
+  animation-name: bubble-rise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.bubble-wobble {
+  animation-name: bubble-wobble;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;

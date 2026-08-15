@@ -50,17 +50,17 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
             </div>
 
             <div className="w-full px-4 md:px-0 flex flex-col items-center">
-            <div className="w-full flex justify-center mb-10">
-                <div className="flex flex-wrap items-center gap-1 md:gap-2 bg-white/5 border border-white/10 backdrop-blur-md px-4 py-2 md:px-6 md:py-2.5 rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
-                    <a href="#osu-stats" className="px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-sm md:text-base font-bold tracking-wide">
+            <div className="w-full flex justify-center mb-8">
+                <div className="flex flex-wrap items-center justify-center gap-1 md:gap-2 bg-white/5 border border-white/10 backdrop-blur-md px-3 py-1.5 md:px-6 md:py-2.5 rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
+                    <a href="#osu-stats" className="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-xs md:text-base font-bold tracking-wide">
                         osu! Stats
                     </a>
                     <span className="w-1.5 h-1.5 rounded-full bg-slate-600/50 hidden md:block"></span>
-                    <a href="#socials" className="px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-sm md:text-base font-bold tracking-wide">
+                    <a href="#socials" className="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-xs md:text-base font-bold tracking-wide">
                         Social Media
                     </a>
                     <span className="w-1.5 h-1.5 rounded-full bg-slate-600/50 hidden md:block"></span>
-                    <a href="#gaming" className="px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-sm md:text-base font-bold tracking-wide">
+                    <a href="#gaming" className="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-xs md:text-base font-bold tracking-wide">
                         Gaming Profile
                     </a>
                 </div>
@@ -82,11 +82,11 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                     </div>
 
                     <div className="relative z-10 flex-1 w-full">
-                        <h3 className="text-xl md:text-3xl tracking-wide uppercase font-black text-center md:text-left mb-2 md:mb-3" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                        <h3 className="text-xl md:text-3xl tracking-wide uppercase font-black text-center mb-2 md:mb-3" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                             <span className="text-white">{t.heroTitleQuestion}</span> <span className="text-cyan-300 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">{t.heroTitleHighlight}</span>
                         </h3>
-                        <div className="w-full md:w-2/3 h-0.5 bg-slate-700/60 mb-3 md:mb-4 rounded-full"></div>
-                        <p className="text-slate-300 text-sm md:text-base leading-relaxed font-medium text-left">
+                        <div className="w-full h-0.5 bg-slate-700/60 mb-3 md:mb-4 rounded-full"></div>
+                        <p className="text-slate-300 text-xs md:text-base leading-relaxed font-medium text-center">
                             {t.heroDescription}
                         </p>
                     </div>
@@ -94,8 +94,8 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
             </div>
 
             <div id="osu-stats" className="scroll-mt-24 w-full flex flex-col mb-6">
-                <div className="w-full flex justify-start mb-3">
-                    <h2 className="text-2xl md:text-3xl text-white drop-shadow-md flex items-center gap-3" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                <div className="w-full flex justify-start mb-2 md:mb-3">
+                    <h2 className="text-xl md:text-3xl text-white drop-shadow-md flex items-center gap-3" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                         osu! Stats
                     </h2>
                 </div>
@@ -244,7 +244,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                     </div>
 
                     <div className="flex-1 w-full text-left md:text-left mt-0 md:mt-0 flex flex-col min-w-0">
-                        <h2 className="text-2xl md:text-5xl mb-1.5 md:mb-2 tracking-wider font-black drop-shadow-[0_3px_10px_rgba(0,0,0,1)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                        <h2 className="text-xl md:text-5xl mb-1.5 md:mb-2 tracking-wider font-black drop-shadow-[0_3px_10px_rgba(0,0,0,1)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                             <span className="text-white">ARNOLD</span><span className="text-cyan-400 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">24X24</span>
                         </h2>
 
@@ -253,22 +253,22 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                             <span className="text-slate-300 text-[11px] md:text-sm font-bold bg-[#050b14]/60 border border-slate-700/50 px-2 py-0.5 md:px-3 md:py-1 rounded-full backdrop-blur-sm shadow-inner">lvl {osuStats.level}</span>
                         </div>
 
-                        <div className="grid grid-cols-4 md:grid-cols-4 gap-1.5 md:gap-3">
-                            <div className="border border-white/5 rounded-lg md:rounded-xl p-2 md:p-3 flex flex-col justify-center">
+                        <div className="grid grid-cols-4 md:grid-cols-4 gap-1 md:gap-3">
+                            <div className="border border-white/5 rounded-md md:rounded-xl p-1.5 md:p-3 flex flex-col justify-center">
                                 <p className="text-slate-400 text-[8px] md:text-xs font-bold uppercase tracking-wider mb-0.5 md:mb-1 leading-tight truncate">{t.globalRank}</p>
-                                <p className="text-base md:text-2xl font-black text-white drop-shadow-md leading-tight">#{osuStats.rank.toLocaleString()}</p>
+                                <p className="text-sm md:text-2xl font-black text-white drop-shadow-md leading-tight">#{osuStats.rank.toLocaleString()}</p>
                             </div>
 
                             <div
-                                className="border border-[#0ea5e9]/30 rounded-lg md:rounded-xl p-2 md:p-3 cursor-pointer hover:border-[#0ea5e9]/70 hover:bg-[#0ea5e9]/5 transition-all group/pp relative overflow-hidden flex flex-col justify-center"
+                                className="border border-[#0ea5e9]/30 rounded-md md:rounded-xl p-1.5 md:p-3 cursor-pointer hover:border-[#0ea5e9]/70 hover:bg-[#0ea5e9]/5 transition-all group/pp relative overflow-hidden flex flex-col justify-center"
                                 onClick={() => setShowTopPlays(true)}
                             >
                                 <div className="transition-all duration-300 group-hover/pp:opacity-0 group-hover/pp:-translate-y-4">
                                     <p className="text-slate-400 text-[8px] md:text-xs font-bold uppercase tracking-wider mb-0.5 md:mb-1 flex justify-between items-center leading-tight truncate">
                                         {t.totalPP}
-                                        <svg className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-cyan-400/80 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+                                        <svg className="w-2 h-2 md:w-3.5 md:h-3.5 text-cyan-400/80 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
                                     </p>
-                                    <p className="text-base md:text-2xl font-black text-cyan-400/80 drop-shadow-md leading-tight">
+                                    <p className="text-sm md:text-2xl font-black text-cyan-400/80 drop-shadow-md leading-tight">
                                         {osuStats.pp.toLocaleString()}
                                     </p>
                                 </div>
@@ -280,20 +280,20 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                                 </div>
                             </div>
 
-                            <div className="border border-white/5 rounded-lg md:rounded-xl p-2 md:p-3 flex flex-col justify-center">
+                            <div className="border border-white/5 rounded-md md:rounded-xl p-1.5 md:p-3 flex flex-col justify-center">
                                 <p className="text-slate-400 text-[8px] md:text-xs font-bold uppercase tracking-wider mb-0.5 md:mb-1 leading-tight truncate">{t.accuracy}</p>
-                                <p className="text-base md:text-2xl font-black text-white drop-shadow-md leading-tight">{osuStats.accuracy}%</p>
+                                <p className="text-sm md:text-2xl font-black text-white drop-shadow-md leading-tight">{osuStats.accuracy}%</p>
                             </div>
 
-                            <div className="border border-white/5 rounded-lg md:rounded-xl p-2 md:p-3 flex flex-col justify-center">
+                            <div className="border border-white/5 rounded-md md:rounded-xl p-1.5 md:p-3 flex flex-col justify-center">
                                 <p className="text-slate-400 text-[8px] md:text-xs font-bold uppercase tracking-wider mb-0.5 md:mb-1 leading-tight truncate">{t.playcount}</p>
-                                <p className="text-base md:text-2xl font-black text-white drop-shadow-md leading-tight">{osuStats.plays.toLocaleString()}</p>
+                                <p className="text-sm md:text-2xl font-black text-white drop-shadow-md leading-tight">{osuStats.plays.toLocaleString()}</p>
                             </div>
                         </div>
 
                         {osuStats.badges && osuStats.badges.length > 0 && (
                             <div className="mt-2 md:mt-6 pt-2 md:pt-4 border-t border-white/5 w-full">
-                                <div className="flex flex-wrap gap-1.5 md:gap-2 justify-center">
+                                <div className="flex md:flex-wrap gap-1.5 md:gap-2 justify-start md:justify-center overflow-x-auto md:overflow-visible pb-2 md:pb-0">
                                     {osuStats.badges.map((badge) => (
                                         <a
                                             key={badge.imageUrl}
@@ -301,7 +301,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             title={badge.description}
-                                            className="hover:-translate-y-1 transition-all duration-300 flex items-center justify-center"
+                                            className="hover:-translate-y-1 transition-all duration-300 flex items-center justify-center shrink-0"
                                         >
                                             <Image
                                                 src={badge.imageUrl}
@@ -509,8 +509,8 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
             <div id="socials" className="scroll-mt-24 mt-8 md:mt-12 relative z-10 w-full flex flex-col gap-4">
 
                 <div className="w-full flex flex-col">
-                    <div className="w-full flex justify-start mb-3">
-                        <h2 className="text-2xl md:text-3xl text-white drop-shadow-md flex items-center gap-3" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                    <div className="w-full flex justify-start mb-2 md:mb-3">
+                        <h2 className="text-xl md:text-3xl text-white drop-shadow-md flex items-center gap-3" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                             Social Media
                         </h2>
                     </div>
@@ -632,7 +632,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                                                 {lang === 'es' ? tweet.etiquetaEs : tweet.etiquetaEn}
                                             </p>
                                         </div>
-                                        <p className="text-sm text-slate-300 font-medium group-hover/twit:text-white transition-colors">
+                                        <p className="text-xs text-slate-300 font-medium group-hover/twit:text-white transition-colors">
                                             {lang === 'es' ? tweet.tituloEs : tweet.tituloEn}
                                         </p>
                                     </a>
@@ -644,25 +644,25 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
             </div>
 
             <div className="w-full flex flex-col mt-16 mb-8">
-                <div id="gaming" className="scroll-mt-24 w-full flex justify-start mb-3">
-                    <h2 className="text-2xl md:text-3xl text-white drop-shadow-md flex items-center gap-3" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                <div id="gaming" className="scroll-mt-24 w-full flex justify-start mb-2 md:mb-3">
+                    <h2 className="text-xl md:text-3xl text-white drop-shadow-md flex items-center gap-3" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                         Gaming Profile
                     </h2>
                 </div>
                 <div className="w-full h-0.5 bg-slate-700/60 rounded-full shadow-inner mb-6"></div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full items-center">
                     <div className="bg-[#0f172a]/60 backdrop-blur-md border border-slate-700/40 rounded-2xl px-6 py-4 flex flex-col shadow-lg w-full h-full justify-center">
-                        <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full py-4 hover:bg-white/5 hover:backdrop-blur-sm rounded-lg px-3 transition-colors duration-300">
-                            <a href="https://psnprofiles.com/arnold24-24" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 mb-2 sm:mb-0 group/link w-fit cursor-pointer">
-                                <div className="relative w-8 h-8 transition-all duration-300 group-hover/link:scale-105">
+                        <div className="flex flex-row items-center justify-between w-full py-3 hover:bg-white/5 hover:backdrop-blur-sm rounded-lg px-2 transition-colors duration-300 gap-2">
+                            <a href="https://psnprofiles.com/arnold24-24" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group/link w-fit cursor-pointer shrink-0">
+                                <div className="relative w-6 h-6 md:w-8 md:h-8 transition-all duration-300 group-hover/link:scale-105">
                                     <Image src="/ps-logo.png" alt="PSN Logo" fill sizes="32px" className="object-contain opacity-70 group-hover/link:grayscale-0 group-hover/link:opacity-100 transition-all duration-300" />
                                 </div>
-                                <span className="text-white tracking-widest text-base sm:text-xl group-hover/link:text-[#00439C] transition-colors" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                                <span className="text-white tracking-widest text-xs sm:text-xl group-hover/link:text-[#00439C] transition-colors" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                     PLAYSTATION ID:
                                 </span>
                             </a>
-                            <button onClick={() => handleCopy('arnold24-24')} className="relative flex justify-start sm:justify-end group/copy cursor-pointer">
-                                <span className="text-slate-300 tracking-wider text-sm sm:text-lg group-hover/copy:text-white transition-colors" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                            <button onClick={() => handleCopy('arnold24-24')} className="relative flex group/copy cursor-pointer shrink-0">
+                                <span className="text-slate-300 tracking-wider text-xs sm:text-lg group-hover/copy:text-white transition-colors" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                     arnold24-24
                                 </span>
                                 <span className={`absolute -top-8 left-1/2 -translate-x-1/2 bg-cyan-600/90 backdrop-blur-md border border-cyan-400/30 text-white text-[10px] font-bold px-2.5 py-1 rounded-md shadow-lg pointer-events-none transition-all duration-300 whitespace-nowrap ${copiedId === 'arnold24-24' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
@@ -672,18 +672,18 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                         </div>
                         <div className="w-full h-px bg-slate-700/50 shadow-inner"></div>
 
-                        <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full py-4 hover:bg-white/5 hover:backdrop-blur-sm rounded-lg px-3 transition-colors duration-300">
-                            <a href="https://steamcommunity.com/profiles/76561199183028639" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 mb-2 sm:mb-0 group/link w-fit cursor-pointer">
-                                <div className="relative w-8 h-8 transition-all duration-300 group-hover/link:scale-105">
+                        <div className="flex flex-row items-center justify-between w-full py-3 hover:bg-white/5 hover:backdrop-blur-sm rounded-lg px-2 transition-colors duration-300 gap-2">
+                            <a href="https://steamcommunity.com/profiles/76561199183028639" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group/link w-fit cursor-pointer shrink-0">
+                                <div className="relative w-6 h-6 md:w-8 md:h-8 transition-all duration-300 group-hover/link:scale-105">
                                     <Image src="/steam-logo.png" alt="Steam Logo" fill sizes="32px" className="object-contain opacity-70 group-hover/link:grayscale-0 group-hover/link:opacity-100 transition-all duration-300" />
                                 </div>
-                                <span className="text-white tracking-widest text-base sm:text-xl group-hover/link:text-[#66c0f4] transition-colors" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                                <span className="text-white tracking-widest text-xs sm:text-xl group-hover/link:text-[#66c0f4] transition-colors" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                     STEAM ID:
                                 </span>
                             </a>
 
-                            <button onClick={() => handleCopy('76561199183028639')} className="relative flex justify-start sm:justify-end group/copy cursor-pointer">
-                                <span className="text-slate-300 tracking-wider text-sm sm:text-base md:text-[15px] group-hover/copy:text-white transition-colors" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                            <button onClick={() => handleCopy('76561199183028639')} className="relative flex group/copy cursor-pointer shrink-0">
+                                <span className="text-slate-300 tracking-wider text-xs sm:text-base md:text-[15px] group-hover/copy:text-white transition-colors" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                     76561199183028639
                                 </span>
                                 <span className={`absolute -top-8 left-1/2 -translate-x-1/2 bg-cyan-600/90 backdrop-blur-md border border-cyan-400/30 text-white text-[10px] font-bold px-2.5 py-1 rounded-md shadow-lg pointer-events-none transition-all duration-300 whitespace-nowrap ${copiedId === '76561199183028639' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
@@ -693,18 +693,18 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                         </div>
                         <div className="w-full h-px bg-slate-700/50 shadow-inner"></div>
 
-                        <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full py-4 hover:bg-white/5 hover:backdrop-blur-sm rounded-lg px-3 transition-colors duration-300">
-                            <div className="flex items-center gap-4 mb-2 sm:mb-0 group/link w-fit cursor-default">
-                                <div className="relative w-8 h-8 transition-all duration-300 group-hover/link:scale-105">
+                        <div className="flex flex-row items-center justify-between w-full py-3 hover:bg-white/5 hover:backdrop-blur-sm rounded-lg px-2 transition-colors duration-300 gap-2">
+                            <div className="flex items-center gap-2 group/link w-fit cursor-default shrink-0">
+                                <div className="relative w-6 h-6 md:w-8 md:h-8 transition-all duration-300 group-hover/link:scale-105">
                                     <Image src="/switch-logo.png" alt="Switch Logo" fill sizes="32px" className="object-contain opacity-70 group-hover/link:grayscale-0 group-hover/link:opacity-100 transition-all duration-300" />
                                 </div>
-                                <span className="text-white tracking-widest text-base sm:text-xl group-hover/link:text-rose-500/90 transition-colors" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                                <span className="text-white tracking-widest text-xs sm:text-xl group-hover/link:text-rose-500/90 transition-colors" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                     NINTENDO ID:
                                 </span>
                             </div>
 
-                            <button onClick={() => handleCopy('SW-4025-3154-4149')} className="relative flex justify-start sm:justify-end group/copy cursor-pointer">
-                                <span className="text-slate-300 tracking-wider text-sm sm:text-base md:text-[15px] group-hover/copy:text-white transition-colors selection:bg-[#E60012]/50" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                            <button onClick={() => handleCopy('SW-4025-3154-4149')} className="relative flex group/copy cursor-pointer shrink-0">
+                                <span className="text-slate-300 tracking-wider text-xs sm:text-base md:text-[15px] group-hover/copy:text-white transition-colors selection:bg-[#E60012]/50" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                     SW-4025-3154-4149
                                 </span>
                                 <span className={`absolute -top-8 left-1/2 -translate-x-1/2 bg-cyan-600/90 backdrop-blur-md border border-cyan-400/30 text-white text-[10px] font-bold px-2.5 py-1 rounded-md shadow-lg pointer-events-none transition-all duration-300 whitespace-nowrap ${copiedId === 'SW-4025-3154-4149' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>

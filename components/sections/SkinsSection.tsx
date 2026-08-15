@@ -18,14 +18,21 @@ interface SkinsSectionProps {
 
 export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onCloseSkin, onOpenLightbox }: SkinsSectionProps) {
     const t = translations[lang];
-    const [activePreviewId, setActivePreviewId] = useState<number | null>(null);
+    const [activePreviewKey, setActivePreviewKey] = useState<string | null>(null);
 
-    const handlePreview = (skin: OsuSkin) => {
-        if (activePreviewId === skin.id) {
+    const handleCardClick = (skin: OsuSkin) => {
+        const isMobile = window.matchMedia('(max-width: 767px)').matches;
+        if (!isMobile) {
             onSelectSkin(skin);
-            setActivePreviewId(null);
+            setActivePreviewKey(null);
+            return;
+        }
+        const key = skin.title;
+        if (activePreviewKey === key) {
+            onSelectSkin(skin);
+            setActivePreviewKey(null);
         } else {
-            setActivePreviewId(skin.id);
+            setActivePreviewKey(key);
         }
     };
 
@@ -61,7 +68,7 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                                 </div>
 
                                 <div className="relative z-10 w-full flex justify-end px-6 md:px-12 pointer-events-none">
-                                    <h2 className="text-4xl md:text-5xl font-black tracking-tighter lowercase bg-clip-text text-transparent bg-linear-to-r from-slate-500 via-slate-300 to-white drop-shadow-lg" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                                    <h2 className="text-xl md:text-5xl font-black tracking-tighter lowercase bg-clip-text text-transparent bg-linear-to-r from-slate-500 via-slate-300 to-white drop-shadow-lg" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                         {t.currentSkinsHeader}
                                     </h2>
                                 </div>
@@ -76,7 +83,7 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                             <div className="absolute top-0 right-0 w-6 h-px bg-cyan-700/60"></div>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
                                 {currentSkins.map((skin) => (
-                                    <SkinCard key={skin.id} skin={skin} previewActive={activePreviewId === skin.id} onCardClick={handlePreview} />
+                                    <SkinCard key={skin.title} skin={skin} previewActive={activePreviewKey === skin.title} onCardClick={handleCardClick} />
                                 ))}
                             </div>
                         </div>
@@ -101,7 +108,7 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                                 </div>
 
                                 <div className="relative z-10 w-full flex justify-end px-6 md:px-12 pointer-events-none">
-                                    <h2 className="text-4xl md:text-5xl font-black tracking-tighter lowercase bg-clip-text text-transparent bg-linear-to-r from-slate-600 via-slate-400 to-slate-200 drop-shadow-lg" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                                    <h2 className="text-xl md:text-5xl font-black tracking-tighter lowercase bg-clip-text text-transparent bg-linear-to-r from-slate-600 via-slate-400 to-slate-200 drop-shadow-lg" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                         {t.oldSkinsHeader}
                                     </h2>
                                 </div>
@@ -118,7 +125,7 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
 
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
                                 {oldSkins.map((skin) => (
-                                    <SkinCard key={skin.id} skin={skin} previewActive={activePreviewId === skin.id} onCardClick={handlePreview} />
+                                    <SkinCard key={skin.title} skin={skin} previewActive={activePreviewKey === skin.title} onCardClick={handleCardClick} />
                                 ))}
                             </div>
                         </div>
@@ -142,7 +149,7 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                             {t.backToCatalog}
                         </button>
 
-                        <div className="w-full aspect-video md:aspect-[21/9] md:h-112.5 relative rounded-3xl overflow-hidden border border-slate-700/50 shadow-[0_0_30px_rgba(0,0,0,0.8)]">
+                        <div className="w-full aspect-video md:aspect-[21/9] md:h-112.5 relative rounded-2xl md:rounded-3xl overflow-hidden border border-slate-700/50 shadow-[0_0_30px_rgba(0,0,0,0.8)] mx-auto max-w-full">
                             <Image
                                 src={selectedSkin.banner || selectedSkin.img}
                                 alt={selectedSkin.title}
@@ -152,18 +159,18 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                             />
                             <div className="absolute inset-0 bg-linear-to-t from-[#050b14]/95 via-[#050b14]/40 to-transparent"></div>
 
-                            <div className="absolute bottom-0 left-0 p-4 md:p-10 flex flex-col items-start w-full z-10">
-                                <h2 className="text-xl md:text-5xl font-black text-white tracking-tight drop-shadow-lg mb-3 md:mb-4">
+                            <div className="absolute bottom-0 left-0 p-3 md:p-10 flex flex-col items-start w-full z-10">
+                                <h2 className="text-xl md:text-5xl font-black text-white tracking-tight drop-shadow-lg mb-2 md:mb-4">
                                     {selectedSkin.title}
                                 </h2>
-                                <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-5 w-full">
+                                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-5 w-full">
                                     <a
                                         href={selectedSkin.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="bg-[#102a54]/80 hover:bg-[#1a3a6a] border border-slate-600/50 text-slate-200 hover:text-white font-black uppercase tracking-wider py-2.5 md:py-4 px-5 md:px-8 rounded-xl transition-all duration-300 shadow-[0_0_15px_rgba(16,42,84,0.4)] hover:shadow-[0_0_20px_rgba(30,64,120,0.6)] hover:-translate-y-1 flex items-center justify-center gap-2 cursor-pointer w-fit text-sm md:text-base"
+                                        className="bg-[#102a54]/80 hover:bg-[#1a3a6a] border border-slate-600/50 text-slate-200 hover:text-white font-black uppercase tracking-wider py-1.5 md:py-4 px-3.5 md:px-8 rounded-lg md:rounded-xl transition-all duration-300 shadow-[0_0_15px_rgba(16,42,84,0.4)] hover:shadow-[0_0_20px_rgba(30,64,120,0.6)] hover:-translate-y-1 flex items-center justify-center gap-1.5 md:gap-2 cursor-pointer w-fit text-[11px] md:text-base"
                                     >
-                                        <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                        <svg className="w-3.5 h-3.5 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
                                         {t.downloadSkin}
                                     </a>
                                     <p className="hidden md:block text-slate-300 text-base font-medium max-w-xl leading-relaxed">
@@ -173,17 +180,17 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                             </div>
                         </div>
 
-                        <div className="mt-4 md:mt-6 bg-[#050b14]/50 border border-slate-700/40 rounded-2xl p-4 md:hidden">
-                            <p className="text-slate-300 text-sm leading-relaxed font-medium">
+                        <div className="mt-3 md:mt-6 bg-[#050b14]/50 border border-slate-700/40 rounded-2xl p-3 md:p-4 md:hidden">
+                            <p className="text-slate-300 text-xs md:text-sm leading-relaxed font-medium">
                                 {lang === 'es' ? selectedSkin.desc : (selectedSkin.descEn || selectedSkin.desc)}
                             </p>
                         </div>
 
                         {!oldSkins.includes(selectedSkin) && (
-                            <div className="mt-12 bg-[#050b14]/40 border border-slate-700/40 p-6 md:p-8 rounded-3xl backdrop-blur-md">
+                            <div className="mt-3 md:mt-12 bg-[#050b14]/40 border border-slate-700/40 p-4 md:p-8 rounded-2xl md:rounded-3xl backdrop-blur-md">
                                 <div className="flex items-center gap-3 border-b border-slate-700/50 pb-4 mb-6">
                                     <svg className="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                                    <h3 className="text-2xl font-bold text-slate-200 tracking-wide">{t.screenshots}</h3>
+                                    <h3 className="text-xl font-bold text-slate-200 tracking-wide">{t.screenshots}</h3>
                                 </div>
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -214,7 +221,7 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                         )}
 
                         {selectedSkin.creators && selectedSkin.creators.length > 0 && (
-                            <div className="mt-8 bg-[#050b14]/40 border border-slate-700/40 p-6 md:p-8 rounded-3xl backdrop-blur-md flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div className="mt-3 md:mt-8 bg-[#050b14]/40 border border-slate-700/40 p-4 md:p-8 rounded-2xl md:rounded-3xl backdrop-blur-md flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
 
                                 <div className="flex flex-col items-center md:items-start gap-1">
                                     <h3 className="text-sm font-bold text-slate-400 tracking-widest uppercase">

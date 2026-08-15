@@ -42,7 +42,7 @@ export default function TipsSection({ lang, openTips, toggleTip }: TipsSectionPr
                         </div>
 
                         <div className="relative z-10 w-full flex flex-col justify-center px-8 md:px-16 pb-8 pointer-events-none">
-                            <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase drop-shadow-[0_3px_10px_rgba(0,0,0,1)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                            <h2 className="text-xl md:text-5xl font-black tracking-tighter uppercase drop-shadow-[0_3px_10px_rgba(0,0,0,1)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                 <span className="text-white">TIPS &</span>
                                 <span className="text-cyan-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] ml-2">{lang === 'es' ? 'CONSEJOS' : 'ADVICE'}</span>
                             </h2>
@@ -67,12 +67,12 @@ export default function TipsSection({ lang, openTips, toggleTip }: TipsSectionPr
                                         onClick={() => toggleTip(idx)}
                                         className="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none cursor-pointer"
                                     >
-                                        <span className="text-slate-200 font-bold text-base md:text-lg">{tip.pregunta}</span>
+                                        <span className="text-slate-200 font-bold text-sm md:text-lg">{tip.pregunta}</span>
                                         <svg className={`w-5 h-5 text-slate-400 transform transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                                     </button>
 
                                     <div className={`overflow-hidden transition-all duration-700 ease-in-out ${isOpen ? 'max-h-[3000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                                        <div className="px-6 pb-6 text-slate-400 font-medium text-sm md:text-base leading-relaxed border-t border-slate-700/30 pt-4 mt-2">
+                                        <div className="px-6 pb-6 text-slate-400 font-medium text-xs md:text-base leading-relaxed border-t border-slate-700/30 pt-4 mt-2">
                                             {tip.respuesta}
                                         </div>
                                     </div>

@@ -43,17 +43,17 @@ export default function Header({ activeTab, setActiveTab, lang, setLang }: Heade
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
                     </button>
 
-                    <div className="flex items-center gap-3 cursor-pointer group">
-                        <div className="relative w-10 h-10 overflow-hidden rounded-lg border border-slate-700 group-hover:border-cyan-400 group-hover:shadow-[0_0_10px_rgba(34,211,238,0.5)] transition-all duration-300 flex items-center justify-center bg-[#0f172a]">
+                    <div className="flex items-center gap-2 cursor-pointer group">
+                        <div className="relative w-9 h-9 md:w-10 md:h-10 overflow-hidden rounded-lg border border-slate-700 group-hover:border-cyan-400 group-hover:shadow-[0_0_10px_rgba(34,211,238,0.5)] transition-all duration-300 flex items-center justify-center bg-[#0f172a]">
                             <Image
                                 src="/logo.png"
                                 alt="Logo"
                                 fill
-                                sizes="40px"
+                                sizes="36px"
                                 className="object-contain"
                             />
                         </div>
-                        <h1 className="text-2xl md:text-3xl font-black tracking-tighter mb-1 uppercase text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                        <h1 className="text-xl md:text-3xl font-black tracking-tighter uppercase text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] leading-tight" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                             Arnold&apos;s <span className="text-cyan-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">DEEP SEA</span>
                         </h1>
                     </div>
@@ -75,27 +75,27 @@ export default function Header({ activeTab, setActiveTab, lang, setLang }: Heade
                     <div className="flex items-center bg-[#050b14]/80 border border-slate-700/80 rounded-lg p-0.5 shadow-md">
                         <button
                             onClick={() => setLang('es')}
-                            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-xs font-bold transition-all cursor-pointer border ${
+                            className={`flex items-center gap-1 px-2 py-1 md:px-2.5 md:py-1.5 rounded-md text-[11px] md:text-xs font-bold transition-all cursor-pointer border ${
                                 lang === 'es'
                                     ? 'bg-cyan-900/50 text-cyan-200 border-cyan-500/40 shadow-[0_0_10px_rgba(34,211,238,0.15)]'
                                     : 'border-transparent text-slate-500 hover:text-slate-300'
                             }`}
                         >
-                            <div className="relative w-3.5 h-2.5 rounded-xs overflow-hidden shrink-0 opacity-90">
+                            <div className="relative w-3 h-2 md:w-3.5 md:h-2.5 rounded-xs overflow-hidden shrink-0 opacity-90">
                                 <Image src="https://flagcdn.com/pe.svg" alt="Peru Flag" fill unoptimized className="object-cover" />
                             </div>
                             ES
                         </button>
-                        <div className="w-px h-3.5 bg-slate-700 mx-0.5"></div>
+                        <div className="w-px h-3 bg-slate-700 mx-0.5"></div>
                         <button
                             onClick={() => setLang('en')}
-                            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-xs font-bold transition-all cursor-pointer border ${
+                            className={`flex items-center gap-1 px-2 py-1 md:px-2.5 md:py-1.5 rounded-md text-[11px] md:text-xs font-bold transition-all cursor-pointer border ${
                                 lang === 'en'
                                     ? 'bg-cyan-900/50 text-cyan-200 border-cyan-500/40 shadow-[0_0_10px_rgba(34,211,238,0.15)]'
                                     : 'border-transparent text-slate-500 hover:text-slate-300'
                             }`}
                         >
-                            <div className="relative w-3.5 h-2.5 rounded-xs overflow-hidden shrink-0 opacity-90">
+                            <div className="relative w-3 h-2 md:w-3.5 md:h-2.5 rounded-xs overflow-hidden shrink-0 opacity-90">
                                 <Image src="https://flagcdn.com/us.svg" alt="USA Flag" fill unoptimized className="object-cover" />
                             </div>
                             EN

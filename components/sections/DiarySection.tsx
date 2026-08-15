@@ -36,7 +36,7 @@ export default function DiarySection({ lang }: { lang: Lang }) {
                         </div>
 
                         <div className="relative z-10 w-full flex flex-col justify-center px-8 md:px-16 pb-8 pointer-events-none">
-                            <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase drop-shadow-[0_3px_10px_rgba(0,0,0,1)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                            <h2 className="text-xl md:text-5xl font-black tracking-tighter uppercase drop-shadow-[0_3px_10px_rgba(0,0,0,1)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                 <span className="text-white">DIA</span>
                                 <span className="text-cyan-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">RY</span>
                             </h2>
@@ -56,7 +56,7 @@ export default function DiarySection({ lang }: { lang: Lang }) {
                                 <h3 className="font-mono text-[10px] md:text-xs text-slate-400 mb-3 uppercase tracking-widest">
                                     {lang === 'es' ? item.titulo : (item.tituloEn || item.titulo)}
                                 </h3>
-                                <p className="text-slate-200 text-sm leading-relaxed font-medium">
+                                <p className="text-slate-200 text-xs leading-relaxed font-medium">
                                     {lang === 'es' ? item.contenido : (item.contenidoEn || item.contenido)}
                                 </p>
                             </div>
@@ -67,7 +67,7 @@ export default function DiarySection({ lang }: { lang: Lang }) {
                                         <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
                                         {lang === 'es' ? item.titulo : (item.tituloEn || item.titulo)}
                                     </h3>
-                                    <p className="text-slate-300 text-sm leading-relaxed font-medium mb-5">
+                                    <p className="text-slate-300 text-xs leading-relaxed font-medium mb-5">
                                         {lang === 'es' ? item.contenido : (item.contenidoEn || item.contenido)}
                                     </p>
                                 </div>

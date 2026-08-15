@@ -39,6 +39,7 @@ export default function GamerProfile() {
     const [selectedSkin, setSelectedSkin] = useState<OsuSkin | null>(null);
     const scrollPositionRef = useRef<number>(0);
     const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+    const copyTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     const toggleTip = (idx: number) => {
         setOpenTips(prev =>
@@ -51,7 +52,10 @@ export default function GamerProfile() {
     const handleCopy = (text: string) => {
         navigator.clipboard.writeText(text).catch(() => {});
         setCopiedId(text);
-        setTimeout(() => setCopiedId(null), 2000);
+        if (copyTimeoutRef.current) {
+            clearTimeout(copyTimeoutRef.current);
+        }
+        copyTimeoutRef.current = setTimeout(() => setCopiedId(null), 500);
     };
 
     const handleSelectSkin = (skin: OsuSkin) => {
@@ -98,6 +102,11 @@ export default function GamerProfile() {
     return (
         <main className="relative min-h-screen flex flex-col text-white overflow-x-hidden">
             <BubblesBackground />
+            <link rel="preload" as="image" href="/banner-setup.jpg" />
+            <link rel="preload" as="image" href="/banner-tips.jpg" />
+            <link rel="preload" as="image" href="/banner-miku-current.png" />
+            <link rel="preload" as="image" href="/banner-miku-oldd.png" />
+            <link rel="preload" as="image" href="/diary.jpg" />
             <Header
                 activeTab={activeTab}
                 setActiveTab={(tab) => {

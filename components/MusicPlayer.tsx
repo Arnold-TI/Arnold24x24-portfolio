@@ -100,7 +100,7 @@ export default function MusicPlayer() {
                 isExpanded ? 'translate-x-0' : '-translate-x-[calc(100%-2rem)]'
             }`}
         >
-            <div className="bg-[#0a1324]/90 backdrop-blur-md border-y border-r border-slate-700/60 p-3.5 rounded-br-2xl shadow-[5px_5px_20px_rgba(5,11,20,0.8)] flex flex-col gap-3 w-72.5">
+            <div className="bg-[#0a1324]/90 backdrop-blur-md border-y border-r border-slate-700/60 p-2.5 md:p-3.5 rounded-br-2xl shadow-[5px_5px_20px_rgba(5,11,20,0.8)] flex flex-col gap-2 md:gap-3 w-60 md:w-72.5">
 
                 <div className="flex items-center gap-4">
                     <div

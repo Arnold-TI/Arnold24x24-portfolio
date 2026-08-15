@@ -47,10 +47,10 @@ export default function SetupSection({ lang, onOpenLightbox }: SetupSectionProps
                             <div className="absolute inset-0 bg-linear-to-r from-[#050b14]/95 via-[#050b14]/70 to-[#050b14]/20"></div>
                         </div>
                         <div className="relative z-10 w-full flex flex-col justify-center px-6 md:px-16 pb-6 md:pb-8 pointer-events-none">
-                            <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase drop-shadow-[0_3px_10px_rgba(0,0,0,1)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                            <h2 className="text-xl md:text-5xl font-black tracking-tighter uppercase drop-shadow-[0_3px_10px_rgba(0,0,0,1)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                 <span className="text-white">Setup &</span> <span className="text-teal-400 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] ml-2">Gear</span>
                             </h2>
-                            <p className="text-cyan-50/90 mt-1.5 md:mt-2 font-medium text-xs md:text-sm max-w-md md:max-w-xl drop-shadow-[0_2px_5px_rgba(0,0,0,0.9)] whitespace-pre-line">
+                            <p className="text-cyan-50/90 mt-1.5 md:mt-2 font-medium text-sm max-w-md md:max-w-xl drop-shadow-[0_2px_5px_rgba(0,0,0,0.9)] whitespace-pre-line">
                                 {t.setupSubtitle}
                             </p>
                         </div>
@@ -98,21 +98,21 @@ export default function SetupSection({ lang, onOpenLightbox }: SetupSectionProps
 
                                     <div className={`relative z-10 w-full p-4 md:p-12 flex flex-col justify-center h-full ${isEven ? 'items-end text-right ml-auto' : 'items-start text-left mr-auto'} md:w-[60%]`}>
 
-                                        <h3 className="text-2xl md:text-3xl font-black text-white mb-2 md:mb-3 tracking-wide group-hover:text-sky-100 transition-colors" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                                        <h3 className="text-xl md:text-3xl font-black text-white mb-2 md:mb-3 tracking-wide group-hover:text-sky-100 transition-colors" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                             {item.name}
                                         </h3>
 
-                                        <div className="flex items-center gap-2 md:gap-3 flex-wrap">
-                                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 md:gap-2 px-3.5 py-2 md:px-5 md:py-2.5 bg-white/5 border border-slate-600 rounded-full text-[11px] md:text-xs font-bold text-slate-300 hover:text-white hover:bg-white/10 hover:border-slate-400 transition-all backdrop-blur-sm cursor-pointer">
+                                        <div className="flex items-center gap-1.5 md:gap-3 flex-wrap mt-auto md:mt-3 pb-8 md:pb-0">
+                                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 md:gap-2 px-3 py-1.5 md:px-5 md:py-2.5 bg-white/5 border border-slate-600 rounded-full text-[10px] md:text-xs font-bold text-slate-300 hover:text-white hover:bg-white/10 hover:border-slate-400 transition-all backdrop-blur-sm cursor-pointer">
                                                 {t.viewOnAmazon}
-                                                <svg className="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                                <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                                             </a>
                                             <button
                                                 onClick={() => toggleDetails(idx)}
-                                                className="flex items-center gap-1.5 md:gap-2 px-3.5 py-2 md:px-5 md:py-2.5 bg-[#102a54]/70 border border-slate-600/70 rounded-full text-[11px] md:text-xs font-bold text-slate-200 hover:text-white hover:bg-[#1a3a6a] hover:border-slate-500 transition-all backdrop-blur-sm cursor-pointer"
+                                                className="flex items-center gap-1 md:gap-2 px-3 py-1.5 md:px-5 md:py-2.5 bg-[#102a54]/70 border border-slate-600/70 rounded-full text-[10px] md:text-xs font-bold text-slate-200 hover:text-white hover:bg-[#1a3a6a] hover:border-slate-500 transition-all backdrop-blur-sm cursor-pointer"
                                             >
                                                 {t.viewDetails}
-                                                <svg className={`w-3 h-3 md:w-3.5 md:h-3.5 transition-transform duration-300 ${openDetails === idx ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
+                                                <svg className={`w-2.5 h-2.5 md:w-3.5 md:h-3.5 transition-transform duration-300 ${openDetails === idx ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
                                             </button>
                                         </div>
 
@@ -123,10 +123,10 @@ export default function SetupSection({ lang, onOpenLightbox }: SetupSectionProps
                                                     animate={{ height: 'auto', opacity: 1, marginTop: 12 }}
                                                     exit={{ height: 0, opacity: 0, marginTop: 0 }}
                                                     transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
-                                                    className="overflow-hidden max-w-md"
+                                                    className="overflow-hidden max-w-[80%] md:max-w-md"
                                                 >
                                                     <div className="relative bg-[#0a1324]/80 border border-slate-700/40 rounded-xl">
-                                                        <p className="text-slate-300 text-xs md:text-base leading-relaxed font-medium drop-shadow-md p-3 md:p-4 pr-8 md:pr-10 text-left">
+                                                        <p className="text-slate-300 text-xs md:text-base leading-relaxed font-medium drop-shadow-md p-2.5 md:p-4 pr-6 md:pr-10 text-left">
                                                             {item.desc}
                                                         </p>
                                                         <div className="absolute bottom-0 left-0 right-0 h-10 bg-linear-to-t from-[#0a1324] to-transparent pointer-events-none rounded-b-xl"></div>
@@ -139,10 +139,10 @@ export default function SetupSection({ lang, onOpenLightbox }: SetupSectionProps
                                     {item.screenshots && item.screenshots.length > 0 && (
                                         <button
                                             onClick={() => onOpenLightbox(item.screenshots!)}
-                                            className={`absolute bottom-4 md:bottom-6 ${isEven ? 'left-4 md:left-6' : 'right-4 md:right-6'} z-30 flex items-center justify-center w-10 h-10 bg-[#050b14]/60 text-slate-500 border border-slate-700/50 rounded-lg hover:bg-white/5 hover:border-slate-500/60 hover:text-slate-300 transition-all duration-300 shadow-md group/gear cursor-pointer`}
+                                            className={`absolute bottom-2 md:bottom-6 ${isEven ? 'left-3 md:left-6' : 'right-3 md:right-6'} z-30 flex items-center justify-center w-7 h-7 md:w-10 md:h-10 bg-[#050b14]/60 text-slate-500 border border-slate-700/50 rounded-lg hover:bg-white/5 hover:border-slate-500/60 hover:text-slate-300 transition-all duration-300 shadow-md group/gear cursor-pointer`}
                                                         title={t.viewConfigTooltip}
                                         >
-                                            <svg className="w-5 h-5 transform group-hover/gear:rotate-90 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <svg className="w-4 h-4 md:w-5 md:h-5 transform group-hover/gear:rotate-90 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                             </svg>

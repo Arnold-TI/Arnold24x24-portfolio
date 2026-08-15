@@ -57,7 +57,7 @@ export default function TwitchStatsCard({ lang }: { lang: Lang }) {
 
                     <div className="flex flex-col justify-center text-left flex-1 min-w-0">
                         <div className="flex flex-wrap items-center gap-3 mb-2">
-                            <h3 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tighter truncate" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>{user.name || 'Arnold24x24'}</h3>
+                            <h3 className="text-xl md:text-3xl font-black text-white uppercase tracking-tighter truncate" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>{user.name || 'Arnold24x24'}</h3>
                             <span className="px-2.5 py-0.5 text-[10px] font-black uppercase tracking-widest rounded-full border shadow-lg shrink-0 bg-red-500/20 text-red-500 border-red-500/50">{t.liveBadge}</span>
                         </div>
                         <div className="mb-4">
@@ -136,7 +136,7 @@ export default function TwitchStatsCard({ lang }: { lang: Lang }) {
                 <div className="relative z-10 flex flex-col items-center transition-transform duration-300 group-hover:-translate-y-1">
                     <div className="flex items-center gap-2 text-white">
                         <svg className="w-5 h-5 md:w-6 md:h-6 text-[#a970ff]" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
-                        <span className="font-black tracking-widest uppercase text-base md:text-lg drop-shadow-md">{t.vods}</span>
+                        <span className="font-black tracking-widest uppercase text-sm md:text-lg drop-shadow-md">{t.vods}</span>
                     </div>
                 </div>
             </a>

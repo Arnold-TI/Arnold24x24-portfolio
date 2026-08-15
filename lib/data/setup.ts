@@ -58,7 +58,7 @@ const en: SetupItem[] = [
         desc: "Current mouse. I use it at 900DPI and 1000Hz polling rate. The ergonomics of this mouse are perfect for any grip type and it is very light (49.5g), so it works great for fast movements. The only disadvantages I see are that it's wired and has a high price. The sensor and building materials are top notch so it's an excellent purchase.",
         link: "#",
         screenshots: ["/mouse-config1.png", "/mouse-config2.png", "/mouse-config3.png", "/mouse-config4.png"],
-        objectPos: "30% 70%"
+        objectPos: "30% 40%"
     },
     {
         name: "Womier SK75 TMR",
