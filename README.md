@@ -1,6 +1,7 @@
 # Arnold24x24 Portfolio
 
-Mi portafolio personal con estética bajo el mar - oscuro azul-oceánico inspirado en la canción del artista YUUYU - Shinkaisyoujo - Deep sea girl (feat. Hatsune Miku). Es de una sola página.
+Mi portafolio personal con estética bajo el mar - oscuro/azul oceánico inspirado en la canción del artista YUUYU - Shinkaisyoujo - Deep sea girl (feat. Hatsune Miku). 
+Es de una sola página.
 
 ## Características
 
@@ -8,7 +9,7 @@ Mi portafolio personal con estética bajo el mar - oscuro azul-oceánico inspira
 - **Estadísticas de mi cuenta de osu!**: rank, PP, accuracy, nivel, badges y top plays, obtenidas de la API v2 de osu! a través de un proxy propio
 - **Estado de Twitch en tiempo real**: live/offline, título del stream, viewers y followers, actualizado cada 60 segundos
 - **Catálogo de skins** con preview en video (mp4), banners, galerías de screenshots con lightbox (zoom hasta 4x) y enlaces de descarga
-- **Reproductor de música** con vinilo giratorio
+- **Reproductor de música** tiene muchas funcionalidades, por ahora solo tiene una canción
 - **Setup**: timeline de periféricos con fotos y configuraciones
 - **Diario personal**: historia desde mis inicios y algunas curiosidades (subi todo el contenido que tenía en privado de mis primeros videos). Aún incompleto
 - **Consejos de juego** en acordeón FAQ
