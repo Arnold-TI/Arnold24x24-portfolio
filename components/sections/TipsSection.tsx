@@ -56,7 +56,7 @@ export default function TipsSection({ lang, openTips, toggleTip }: TipsSectionPr
                 <div className="w-full px-4 md:px-0">
                     <div className="w-full h-0.5 bg-slate-700/60 rounded-full shadow-inner mb-12"></div>
 
-                    <div className="w-full max-w-5xl">
+                    <div className="w-full max-w-5xl mx-auto">
                     <div className="flex flex-col gap-4">
                         {tipsData.map((tip, idx) => {
                             const isOpen = openTips.includes(idx);
