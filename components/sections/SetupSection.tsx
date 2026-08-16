@@ -31,9 +31,9 @@ export default function SetupSection({ lang, onOpenLightbox }: SetupSectionProps
         >
             <div className="w-full flex flex-col items-center">
 
-                <div className="w-full md:w-[calc(100%+6rem)] md:-mx-12 -mt-4 mb-2">
+                <div className="w-full lg:w-[calc(100%+6rem)] lg:-mx-12 -mt-4 mb-2">
                     <div
-                        className="relative w-full h-48 md:h-60 overflow-hidden flex items-center"
+                        className="relative w-full h-48 lg:h-60 overflow-hidden flex items-center"
                         style={{ maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)' }}
                     >
                         <div className="absolute inset-0 z-0">
@@ -47,7 +47,7 @@ export default function SetupSection({ lang, onOpenLightbox }: SetupSectionProps
                             <div className="absolute inset-0 bg-linear-to-r from-[#050b14]/95 via-[#050b14]/70 to-[#050b14]/20"></div>
                         </div>
                         <div className="relative z-10 w-full flex flex-col justify-center px-6 md:px-16 pb-6 md:pb-8 pointer-events-none">
-                            <h2 className="text-2xl md:text-5xl font-black tracking-tighter uppercase drop-shadow-[0_3px_10px_rgba(0,0,0,1)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                            <h2 className="text-2xl lg:text-5xl font-black tracking-tighter uppercase drop-shadow-[0_3px_10px_rgba(0,0,0,1)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                 <span className="text-white">Setup &</span> <span className="text-teal-400 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] ml-2">Gear</span>
                             </h2>
                             <p className="text-cyan-50/90 mt-1.5 md:mt-2 font-medium text-xs md:text-sm max-w-md md:max-w-xl drop-shadow-[0_2px_5px_rgba(0,0,0,0.9)] whitespace-pre-line">
@@ -74,7 +74,7 @@ export default function SetupSection({ lang, onOpenLightbox }: SetupSectionProps
                             const isEven = idx % 2 === 0;
 
                             return (
-                                <div key={idx} className="relative w-full h-auto min-h-44 md:min-h-88 bg-[#050b14]/50 border border-slate-700/50 rounded-2xl overflow-hidden group hover:border-slate-500/50 hover:bg-[#0a1324]/50 transition-all duration-500 flex items-center shadow-lg">
+                                <div key={idx} className="relative w-full h-auto min-h-44 lg:min-h-88 bg-[#050b14]/50 border border-slate-700/50 rounded-2xl overflow-hidden group hover:border-slate-500/50 hover:bg-[#0a1324]/50 transition-all duration-500 flex items-center shadow-lg">
                                     <div
                                         className={`absolute top-0 bottom-0 w-full md:w-[65%] z-0 ${isEven ? 'left-0' : 'right-0'}`}
                                         style={{

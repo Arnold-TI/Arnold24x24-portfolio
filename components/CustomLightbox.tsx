@@ -20,6 +20,7 @@ export default function CustomLightbox({ images, initialIndex, onClose, lang }: 
     const [pan, setPan] = useState({ x: 0, y: 0 });
     const [dragDelta, setDragDelta] = useState({ x: 0, y: 0 });
     const dragStateRef = useRef({ isDragging: false, startX: 0, startY: 0 });
+    const pinchRef = useRef({ active: false, distance: 0, zoom: 1 });
 
     useEffect(() => {
         document.body.style.overflow = 'hidden';
@@ -107,17 +108,45 @@ export default function CustomLightbox({ images, initialIndex, onClose, lang }: 
         endDrag();
     };
 
+    const getTouchDistance = (touches: React.TouchList) => {
+        if (touches.length < 2) return 0;
+        const dx = touches[0].clientX - touches[1].clientX;
+        const dy = touches[0].clientY - touches[1].clientY;
+        return Math.sqrt(dx * dx + dy * dy);
+    };
+
     const handleTouchStart = (e: TouchEvent) => {
+        if (e.touches.length >= 2) {
+            pinchRef.current = {
+                active: true,
+                distance: getTouchDistance(e.touches),
+                zoom: zoomLevel,
+            };
+            return;
+        }
         const touch = e.touches[0];
         startDrag(touch.clientX, touch.clientY);
     };
 
     const handleTouchMove = (e: TouchEvent) => {
+        if (pinchRef.current.active && e.touches.length >= 2) {
+            const distance = getTouchDistance(e.touches);
+            if (distance > 0 && pinchRef.current.distance > 0) {
+                const ratio = distance / pinchRef.current.distance;
+                const next = Math.min(Math.max(pinchRef.current.zoom * ratio, 1), 4);
+                setZoomLevel(next);
+            }
+            return;
+        }
         const touch = e.touches[0];
         moveDrag(touch.clientX, touch.clientY);
     };
 
     const handleTouchEnd = () => {
+        if (pinchRef.current.active) {
+            pinchRef.current.active = false;
+            return;
+        }
         endDrag();
     };
 

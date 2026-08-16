@@ -53,8 +53,8 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                     className="w-full flex flex-col items-center"
                 >
                     <div className="w-full flex flex-col items-center mb-20 relative">
-                        <div className="w-full md:w-[calc(100%+6rem)] md:-mx-12 -mt-4 mb-3">
-                            <div className="relative w-full h-40 md:h-48 overflow-hidden flex items-center">
+                        <div className="w-full lg:w-[calc(100%+6rem)] lg:-mx-12 -mt-4 mb-3">
+                            <div className="relative w-full h-40 lg:h-48 overflow-hidden flex items-center">
                                 <div
                                     className="absolute top-0 left-0 h-full w-[90%] md:w-[70%] z-0"
                                     style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}
@@ -68,7 +68,7 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                                 </div>
 
                                 <div className="relative z-10 w-full flex justify-end px-6 md:px-12 pointer-events-none">
-                                    <h2 className="text-xl md:text-5xl font-black tracking-tighter lowercase bg-clip-text text-transparent bg-linear-to-r from-slate-500 via-slate-300 to-white drop-shadow-lg" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                                    <h2 className="text-2xl md:text-3xl lg:text-5xl font-black tracking-tighter lowercase bg-clip-text text-transparent bg-linear-to-r from-slate-500 via-slate-300 to-white drop-shadow-lg" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                         {t.currentSkinsHeader}
                                     </h2>
                                 </div>
@@ -90,8 +90,8 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                     </div>
 
                     <div className="w-full flex flex-col items-center mb-10 relative">
-                        <div className="w-full md:w-[calc(100%+6rem)] md:-mx-12 -mt-4 mb-3">
-                            <div className="relative w-full h-40 md:h-48 overflow-hidden flex items-center">
+                        <div className="w-full lg:w-[calc(100%+6rem)] lg:-mx-12 -mt-4 mb-3">
+                            <div className="relative w-full h-40 lg:h-48 overflow-hidden flex items-center">
                                 <div
                                     className="absolute top-0 left-0 h-full w-[90%] md:w-[70%] z-0"
                                     style={{
@@ -108,7 +108,7 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                                 </div>
 
                                 <div className="relative z-10 w-full flex justify-end px-6 md:px-12 pointer-events-none">
-                                    <h2 className="text-xl md:text-5xl font-black tracking-tighter lowercase bg-clip-text text-transparent bg-linear-to-r from-slate-600 via-slate-400 to-slate-200 drop-shadow-lg" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                                    <h2 className="text-2xl md:text-3xl lg:text-5xl font-black tracking-tighter lowercase bg-clip-text text-transparent bg-linear-to-r from-slate-600 via-slate-400 to-slate-200 drop-shadow-lg" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                         {t.oldSkinsHeader}
                                     </h2>
                                 </div>
@@ -160,7 +160,7 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                             <div className="absolute inset-0 bg-linear-to-t from-[#050b14]/95 via-[#050b14]/40 to-transparent"></div>
 
                             <div className="absolute bottom-0 left-0 p-3 md:p-10 flex flex-col items-start w-full z-10">
-                                <h2 className="text-xl md:text-5xl font-black text-white tracking-tight drop-shadow-lg mb-2 md:mb-4">
+                                <h2 className="text-xl md:text-2xl lg:text-5xl font-black text-white tracking-tight drop-shadow-lg mb-2 lg:mb-4">
                                     {selectedSkin.title}
                                 </h2>
                                 <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-5 w-full">
@@ -168,9 +168,9 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                                         href={selectedSkin.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="bg-[#102a54]/80 hover:bg-[#1a3a6a] border border-slate-600/50 text-slate-200 hover:text-white font-black uppercase tracking-wider py-1.5 md:py-4 px-3.5 md:px-8 rounded-lg md:rounded-xl transition-all duration-300 shadow-[0_0_15px_rgba(16,42,84,0.4)] hover:shadow-[0_0_20px_rgba(30,64,120,0.6)] hover:-translate-y-1 flex items-center justify-center gap-1.5 md:gap-2 cursor-pointer w-fit text-[11px] md:text-base"
+                                        className="bg-[#102a54]/80 hover:bg-[#1a3a6a] border border-slate-600/50 text-slate-200 hover:text-white font-black uppercase tracking-wider py-1.5 md:py-2.5 lg:py-4 px-3.5 md:px-5 lg:px-8 rounded-lg md:rounded-xl transition-all duration-300 shadow-[0_0_15px_rgba(16,42,84,0.4)] hover:shadow-[0_0_20px_rgba(30,64,120,0.6)] hover:-translate-y-1 flex items-center justify-center gap-1.5 md:gap-2 cursor-pointer w-fit text-[11px] md:text-sm lg:text-base"
                                     >
-                                        <svg className="w-3.5 h-3.5 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                        <svg className="w-3.5 h-3.5 md:w-6 md:h-6 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
                                         {t.downloadSkin}
                                     </a>
                                     <p className="hidden md:block text-slate-300 text-base font-medium max-w-xl leading-relaxed">

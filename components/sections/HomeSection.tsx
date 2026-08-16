@@ -34,9 +34,9 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="w-full md:w-[calc(100%+6rem)] md:-mx-12 -mt-4"
+                    className="w-full lg:w-[calc(100%+6rem)] lg:-mx-12 -mt-4"
                 >
-                    <div className="relative w-full aspect-[4.8/1] md:aspect-5/1 overflow-hidden border-b border-slate-700/80 shadow-[0_15px_40px_rgba(5,11,20,0.4)]">
+                    <div className="relative w-full aspect-[4.8/1] lg:aspect-5/1 overflow-hidden border-b border-slate-700/80 shadow-[0_15px_40px_rgba(5,11,20,0.4)]">
                         <Image
                             src="/Banner-Arnold24x24.png"
                             alt="Welcome to Arnold24x24"
@@ -49,26 +49,26 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                 </motion.div>
             </div>
 
-            <div className="w-full px-4 md:px-0 flex flex-col items-center">
+            <div className="w-full px-4 lg:px-0 flex flex-col items-center">
             <div className="w-full flex justify-center mb-6 md:mb-8">
                 <div className="flex flex-wrap items-center justify-center gap-1 md:gap-2 bg-white/5 border border-white/10 backdrop-blur-md px-3 py-1.5 md:px-6 md:py-2.5 rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
                     <button
                         onClick={() => document.getElementById('osu-stats')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-xs md:text-base font-bold tracking-wide cursor-pointer"
+                        className="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-xs md:text-sm lg:text-base font-bold tracking-wide cursor-pointer"
                     >
                         osu! Stats
                     </button>
                     <span className="w-1.5 h-1.5 rounded-full bg-slate-600/50 hidden md:block"></span>
                     <button
                         onClick={() => document.getElementById('socials')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-xs md:text-base font-bold tracking-wide cursor-pointer"
+                        className="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-xs md:text-sm lg:text-base font-bold tracking-wide cursor-pointer"
                     >
                         Social Media
                     </button>
                     <span className="w-1.5 h-1.5 rounded-full bg-slate-600/50 hidden md:block"></span>
                     <button
                         onClick={() => document.getElementById('gaming')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-xs md:text-base font-bold tracking-wide cursor-pointer"
+                        className="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-xs md:text-sm lg:text-base font-bold tracking-wide cursor-pointer"
                     >
                         Gaming Profile
                     </button>
@@ -95,7 +95,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                             <span className="text-white">{t.heroTitleQuestion}</span> <span className="text-cyan-300 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">{t.heroTitleHighlight}</span>
                         </h3>
                         <div className="w-full h-0.5 bg-slate-700/60 mb-3 md:mb-4 rounded-full"></div>
-                        <p className="text-slate-300 text-xs md:text-base leading-relaxed font-medium text-center">
+                        <p className="text-slate-300 text-xs lg:text-base leading-relaxed font-medium text-center">
                             {t.heroDescription}
                         </p>
                     </div>
@@ -104,7 +104,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
 
             <div id="osu-stats" className="scroll-mt-24 w-full flex flex-col mb-6">
                 <div className="w-full flex justify-start mb-2 md:mb-3">
-                    <h2 className="text-xl md:text-3xl text-white drop-shadow-md flex items-center gap-3" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                    <h2 className="text-xl lg:text-3xl text-white drop-shadow-md flex items-center gap-3" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                         osu! Stats
                     </h2>
                 </div>
@@ -268,7 +268,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                     </div>
 
                     <div className="flex-1 w-full text-left md:text-left mt-0 md:mt-0 flex flex-col min-w-0">
-                        <h2 className="text-xl md:text-5xl mb-1.5 md:mb-2 tracking-wider font-black drop-shadow-[0_3px_10px_rgba(0,0,0,1)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                        <h2 className="text-xl lg:text-5xl mb-1.5 lg:mb-2 tracking-wider font-black drop-shadow-[0_3px_10px_rgba(0,0,0,1)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                             <span className="text-white">ARNOLD</span><span className="text-cyan-400 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">24X24</span>
                         </h2>
 
@@ -280,7 +280,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                         <div className="grid grid-cols-4 md:grid-cols-4 gap-1 md:gap-3">
                             <div className="border border-white/5 rounded-md md:rounded-xl p-1.5 md:p-3 flex flex-col justify-center">
                                 <p className="text-slate-400 text-[7px] md:text-[10px] lg:text-xs font-bold uppercase tracking-wider mb-0.5 md:mb-1 leading-tight truncate">{t.globalRank}</p>
-                                <p className="text-xs md:text-lg lg:text-2xl font-black text-white drop-shadow-md leading-tight">#{osuStats.rank.toLocaleString()}</p>
+                                <p className="text-xs lg:text-2xl font-black text-white drop-shadow-md leading-tight">#{osuStats.rank.toLocaleString()}</p>
                             </div>
 
                             <div
@@ -292,7 +292,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                                         {t.totalPP}
                                         <svg className="w-2 h-2 md:w-3.5 md:h-3.5 text-cyan-400/80 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
                                     </p>
-                                    <p className="text-xs md:text-lg lg:text-2xl font-black text-cyan-400/80 drop-shadow-md leading-tight">
+                                    <p className="text-xs lg:text-2xl font-black text-cyan-400/80 drop-shadow-md leading-tight">
                                         {osuStats.pp.toLocaleString()}
                                     </p>
                                 </div>
@@ -306,12 +306,12 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
 
                             <div className="border border-white/5 rounded-md md:rounded-xl p-1.5 md:p-3 flex flex-col justify-center">
                                 <p className="text-slate-400 text-[7px] md:text-[10px] lg:text-xs font-bold uppercase tracking-wider mb-0.5 md:mb-1 leading-tight truncate">{t.accuracy}</p>
-                                <p className="text-xs md:text-lg lg:text-2xl font-black text-white drop-shadow-md leading-tight">{osuStats.accuracy}%</p>
+                                <p className="text-xs lg:text-2xl font-black text-white drop-shadow-md leading-tight">{osuStats.accuracy}%</p>
                             </div>
 
                             <div className="border border-white/5 rounded-md md:rounded-xl p-1.5 md:p-3 flex flex-col justify-center">
                                 <p className="text-slate-400 text-[7px] md:text-[10px] lg:text-xs font-bold uppercase tracking-wider mb-0.5 md:mb-1 leading-tight truncate">{t.playcount}</p>
-                                <p className="text-xs md:text-lg lg:text-2xl font-black text-white drop-shadow-md leading-tight">{osuStats.plays.toLocaleString()}</p>
+                                <p className="text-xs lg:text-2xl font-black text-white drop-shadow-md leading-tight">{osuStats.plays.toLocaleString()}</p>
                             </div>
                         </div>
 
@@ -464,21 +464,21 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
 
                 <div className="w-full flex flex-col">
                     <div className="w-full flex justify-start mb-2 md:mb-3">
-                        <h2 className="text-xl md:text-3xl text-white drop-shadow-md flex items-center gap-3" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                        <h2 className="text-xl lg:text-3xl text-white drop-shadow-md flex items-center gap-3" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                             Social Media
                         </h2>
                     </div>
                     <div className="w-full h-0.5 bg-slate-700/60 rounded-full shadow-inner"></div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full mt-2 max-w-md mx-auto md:max-w-none">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full mt-2 max-w-md md:max-w-3xl mx-auto">
 
                     <div className="w-full flex flex-col">
                         <div className="border-b border-slate-700/50 pb-2 mb-4">
                             <a href="https://twitch.tv/arnold24x24" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 w-fit group cursor-pointer transition-transform duration-300 hover:-translate-y-1">
                                 <svg className="w-6 h-6 md:w-7 md:h-7 text-white group-hover:text-[#6366f1] transition-all duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z" /></svg>
 
-                                <h3 className="text-xl md:text-2xl text-white group-hover:text-[#6366f1] tracking-wide uppercase transition-colors duration-300 drop-shadow-md" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                                <h3 className="text-xl lg:text-2xl text-white group-hover:text-[#6366f1] tracking-wide uppercase transition-colors duration-300 drop-shadow-md" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                     TWITCH
                                 </h3>
                             </a>
@@ -496,9 +496,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                     </div>
 
                     <div className="w-full flex flex-col">
-                        <div className="h-12 mb-4 invisible hidden md:block"></div>
-
-                        <div className="relative w-full h-64 md:h-112.5 flex items-center justify-center">
+                        <div className="relative w-full h-64 md:h-full md:min-h-80 flex items-center justify-center">
                             <div className="relative w-[85%] h-[85%]">
                                 <Image
                                     src="/silueta.png"
@@ -515,7 +513,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                         <div className="border-b border-slate-700/50 pb-2 mb-4">
                             <a href="https://youtube.com/@Arnold24x24" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 w-fit group cursor-pointer transition-transform duration-300 hover:-translate-y-1">
                                 <svg className="w-6 h-6 md:w-7 md:h-7 text-white group-hover:text-[#e11d48] transition-all duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                                <h3 className="text-xl md:text-2xl text-white group-hover:text-[#e11d48] tracking-wide uppercase transition-colors duration-300 drop-shadow-md" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                                <h3 className="text-xl lg:text-2xl text-white group-hover:text-[#e11d48] tracking-wide uppercase transition-colors duration-300 drop-shadow-md" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                     YOUTUBE
                                 </h3>
                             </a>
@@ -564,7 +562,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                         <div className="border-b border-slate-700/50 pb-2 mb-4">
                             <a href="https://x.com/Arnold24x24" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 w-fit group cursor-pointer transition-transform duration-300 hover:-translate-y-1">
                                 <svg className="w-5 h-5 md:w-6 md:h-6 text-white group-hover:text-cyan-400/80 transition-all duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
-                                <h3 className="text-xl md:text-2xl text-white group-hover:text-cyan-400/80 tracking-wide uppercase transition-colors duration-300 drop-shadow-md" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                                <h3 className="text-xl lg:text-2xl text-white group-hover:text-cyan-400/80 tracking-wide uppercase transition-colors duration-300 drop-shadow-md" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                     TWITTER
                                 </h3>
                             </a>
@@ -599,7 +597,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
 
             <div className="w-full flex flex-col mt-8 mb-6 md:mt-16 md:mb-8">
                 <div id="gaming" className="scroll-mt-24 w-full flex justify-start mb-2 md:mb-3">
-                    <h2 className="text-xl md:text-3xl text-white drop-shadow-md flex items-center gap-3" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                    <h2 className="text-xl lg:text-3xl text-white drop-shadow-md flex items-center gap-3" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                         Gaming Profile
                     </h2>
                 </div>
