@@ -62,7 +62,6 @@ body {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   will-change: transform;
-  contain: layout paint;
 }
 
 .bubble-wobble {
