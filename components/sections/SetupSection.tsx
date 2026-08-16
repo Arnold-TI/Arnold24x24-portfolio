@@ -47,10 +47,10 @@ export default function SetupSection({ lang, onOpenLightbox }: SetupSectionProps
                             <div className="absolute inset-0 bg-linear-to-r from-[#050b14]/95 via-[#050b14]/70 to-[#050b14]/20"></div>
                         </div>
                         <div className="relative z-10 w-full flex flex-col justify-center px-6 md:px-16 pb-6 md:pb-8 pointer-events-none">
-                            <h2 className="text-xl md:text-5xl font-black tracking-tighter uppercase drop-shadow-[0_3px_10px_rgba(0,0,0,1)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                            <h2 className="text-2xl md:text-5xl font-black tracking-tighter uppercase drop-shadow-[0_3px_10px_rgba(0,0,0,1)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                 <span className="text-white">Setup &</span> <span className="text-teal-400 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] ml-2">Gear</span>
                             </h2>
-                            <p className="text-cyan-50/90 mt-1.5 md:mt-2 font-medium text-sm max-w-md md:max-w-xl drop-shadow-[0_2px_5px_rgba(0,0,0,0.9)] whitespace-pre-line">
+                            <p className="text-cyan-50/90 mt-1.5 md:mt-2 font-medium text-xs md:text-sm max-w-md md:max-w-xl drop-shadow-[0_2px_5px_rgba(0,0,0,0.9)] whitespace-pre-line">
                                 {t.setupSubtitle}
                             </p>
                         </div>

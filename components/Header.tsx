@@ -53,7 +53,7 @@ export default function Header({ activeTab, setActiveTab, lang, setLang }: Heade
                                 className="object-contain"
                             />
                         </div>
-                        <h1 className="text-xl md:text-3xl font-black tracking-tighter uppercase text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] leading-tight" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                        <h1 className="text-lg md:text-3xl font-black tracking-tighter uppercase text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] leading-tight" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                             Arnold&apos;s <span className="text-cyan-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">DEEP SEA</span>
                         </h1>
                     </div>

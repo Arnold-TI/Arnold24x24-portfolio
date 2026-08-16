@@ -29,7 +29,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
         >
-            <div className="w-full relative z-10 mb-12">
+            <div className="w-full relative z-10 mb-6 md:mb-12">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
             </div>
 
             <div className="w-full px-4 md:px-0 flex flex-col items-center">
-            <div className="w-full flex justify-center mb-8">
+            <div className="w-full flex justify-center mb-6 md:mb-8">
                 <div className="flex flex-wrap items-center justify-center gap-1 md:gap-2 bg-white/5 border border-white/10 backdrop-blur-md px-3 py-1.5 md:px-6 md:py-2.5 rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
                     <a href="#osu-stats" className="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-xs md:text-base font-bold tracking-wide">
                         osu! Stats
@@ -66,7 +66,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                 </div>
             </div>
 
-            <div className="w-full mb-12 bg-[#1e293b]/40 border border-slate-700/50 rounded-2xl overflow-hidden shadow-lg">
+            <div className="w-full mb-6 md:mb-12 bg-[#1e293b]/40 border border-slate-700/50 rounded-2xl overflow-hidden shadow-lg">
                 <div className="p-4 md:p-8 flex flex-row items-center md:items-start gap-4 md:gap-6 relative">
 
                     <div className="relative z-10 shrink-0 bg-white overflow-hidden rounded-xl border border-slate-700/80 shadow-md w-20 h-20 md:w-36 md:h-36">
@@ -506,7 +506,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                 </div>
             </div>
 
-            <div id="socials" className="scroll-mt-24 mt-8 md:mt-12 relative z-10 w-full flex flex-col gap-4">
+            <div id="socials" className="scroll-mt-24 mt-6 md:mt-12 relative z-10 w-full flex flex-col gap-4">
 
                 <div className="w-full flex flex-col">
                     <div className="w-full flex justify-start mb-2 md:mb-3">
@@ -643,7 +643,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                 </div>
             </div>
 
-            <div className="w-full flex flex-col mt-16 mb-8">
+            <div className="w-full flex flex-col mt-6 mb-6 md:mt-16 md:mb-8">
                 <div id="gaming" className="scroll-mt-24 w-full flex justify-start mb-2 md:mb-3">
                     <h2 className="text-xl md:text-3xl text-white drop-shadow-md flex items-center gap-3" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                         Gaming Profile

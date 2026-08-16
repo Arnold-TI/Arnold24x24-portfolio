@@ -117,7 +117,7 @@ export default function GamerProfile() {
                 setLang={setLang}
             />
 
-            <div className="grow w-full max-w-300 mx-auto mt-24 mb-0 md:mt-28 md:mb-12 md:bg-[#0f172a]/70 md:backdrop-blur-md md:border md:border-slate-700/50 md:shadow-[0_0_50px_rgba(5,11,20,0.8)] relative z-10 flex flex-col md:pt-4 pb-20 md:px-12 min-h-[60vh]">
+            <div className="grow w-full max-w-300 mx-auto mt-20 mb-0 md:mt-28 md:mb-12 bg-[#0f172a]/75 backdrop-blur-sm md:bg-[#0f172a]/70 md:backdrop-blur-md md:border md:border-slate-700/50 md:shadow-[0_0_50px_rgba(5,11,20,0.8)] relative z-10 flex flex-col pt-4 pb-20 md:pt-4 md:px-12 min-h-[60vh]">
 
                 {activeTab === 'home' && (
                     <HomeSection

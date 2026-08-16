@@ -11,7 +11,10 @@ export default function BubblesBackground() {
     const [bubbles, setBubbles] = useState<AnimatedBubble[]>([]);
 
     useEffect(() => {
-        const generatedBubbles: AnimatedBubble[] = Array.from({ length: 18 }).map((_, i) => ({
+        const isMobile = window.innerWidth < 768;
+        const count = isMobile ? 8 : 18;
+
+        const generatedBubbles: AnimatedBubble[] = Array.from({ length: count }).map((_, i) => ({
             id: i,
             size: Math.random() * 40 + 10,
             left: `${Math.random() * 100}%`,

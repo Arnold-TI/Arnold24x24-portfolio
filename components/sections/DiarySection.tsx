@@ -36,11 +36,11 @@ export default function DiarySection({ lang }: { lang: Lang }) {
                         </div>
 
                         <div className="relative z-10 w-full flex flex-col justify-center px-8 md:px-16 pb-8 pointer-events-none">
-                            <h2 className="text-xl md:text-5xl font-black tracking-tighter uppercase drop-shadow-[0_3px_10px_rgba(0,0,0,1)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                            <h2 className="text-2xl md:text-5xl font-black tracking-tighter uppercase drop-shadow-[0_3px_10px_rgba(0,0,0,1)]" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                                 <span className="text-white">DIA</span>
                                 <span className="text-cyan-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">RY</span>
                             </h2>
-                            <p className="text-cyan-50/90 mt-2 font-medium text-sm md:text-base max-w-xl drop-shadow-[0_2px_5px_rgba(0,0,0,1)]">
+                            <p className="text-cyan-50/90 mt-2 font-medium text-xs md:text-base max-w-xl drop-shadow-[0_2px_5px_rgba(0,0,0,1)]">
                                 {t.diarySubtitle}
                             </p>
                         </div>

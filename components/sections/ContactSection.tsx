@@ -44,7 +44,7 @@ export default function ContactSection({ lang, handleCopy, copiedId }: ContactSe
                 <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-indigo-500/10 blur-3xl rounded-full pointer-events-none"></div>
                 <div className="relative z-10 w-full flex flex-col items-center">
 
-                    <h2 className="text-xl md:text-5xl font-black tracking-tighter uppercase drop-shadow-[0_3px_10px_rgba(0,0,0,1)] mb-4 md:mb-6" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
+                    <h2 className="text-2xl md:text-5xl font-black tracking-tighter uppercase drop-shadow-[0_3px_10px_rgba(0,0,0,1)] mb-4 md:mb-6" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                         <span className="text-white">{t.contactTitle}</span>
                     </h2>
 
