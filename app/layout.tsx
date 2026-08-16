@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import type { ReactNode } from "react";
 import ProfileContent from "@/components/ProfileContent";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 
 const outfit = Outfit({
