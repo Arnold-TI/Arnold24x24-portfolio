@@ -62,13 +62,22 @@ body {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   will-change: transform;
+  contain: layout paint;
 }
 
 .bubble-wobble {
+  --wobble: 0px;
   animation-name: bubble-wobble;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bubble-rise,
+  .bubble-wobble {
+    animation: none;
+  }
 }
 
 @layer utilities {

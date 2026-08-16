@@ -52,21 +52,30 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
             <div className="w-full px-4 md:px-0 flex flex-col items-center">
             <div className="w-full flex justify-center mb-6 md:mb-8">
                 <div className="flex flex-wrap items-center justify-center gap-1 md:gap-2 bg-white/5 border border-white/10 backdrop-blur-md px-3 py-1.5 md:px-6 md:py-2.5 rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
-                    <a href="#osu-stats" className="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-xs md:text-base font-bold tracking-wide">
+                    <button
+                        onClick={() => document.getElementById('osu-stats')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-xs md:text-base font-bold tracking-wide cursor-pointer"
+                    >
                         osu! Stats
-                    </a>
+                    </button>
                     <span className="w-1.5 h-1.5 rounded-full bg-slate-600/50 hidden md:block"></span>
-                    <a href="#socials" className="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-xs md:text-base font-bold tracking-wide">
+                    <button
+                        onClick={() => document.getElementById('socials')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-xs md:text-base font-bold tracking-wide cursor-pointer"
+                    >
                         Social Media
-                    </a>
+                    </button>
                     <span className="w-1.5 h-1.5 rounded-full bg-slate-600/50 hidden md:block"></span>
-                    <a href="#gaming" className="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-xs md:text-base font-bold tracking-wide">
+                    <button
+                        onClick={() => document.getElementById('gaming')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-xs md:text-base font-bold tracking-wide cursor-pointer"
+                    >
                         Gaming Profile
-                    </a>
+                    </button>
                 </div>
             </div>
 
-            <div className="w-full mb-6 md:mb-12 bg-[#1e293b]/40 border border-slate-700/50 rounded-2xl overflow-hidden shadow-lg">
+            <div className="w-full mb-8 md:mb-12 bg-[#1e293b]/40 border border-slate-700/50 rounded-2xl overflow-hidden shadow-lg">
                 <div className="p-4 md:p-8 flex flex-row items-center md:items-start gap-4 md:gap-6 relative">
 
                     <div className="relative z-10 shrink-0 bg-white overflow-hidden rounded-xl border border-slate-700/80 shadow-md w-20 h-20 md:w-36 md:h-36">
@@ -164,6 +173,21 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                             </div>
                         </a>
 
+                        <div className="md:hidden flex flex-col items-center gap-2 mt-3">
+                            <a href="https://osu.ppy.sh/teams/38254" target="_blank" rel="noopener noreferrer" className="relative w-12 h-4 block">
+                                <Image src="/button1.gif" alt="Hoshinomori Aero Clan" width={88} height={31} unoptimized sizes="88px" className="object-cover" style={{ imageRendering: 'pixelated' }} />
+                            </a>
+                            <a href="https://discord.gg/Cvv69NB" target="_blank" rel="noopener noreferrer" className="relative w-12 h-4 block">
+                                <Image src="/button2.gif" alt="Discord Server" width={88} height={31} unoptimized sizes="88px" className="object-cover" style={{ imageRendering: 'pixelated' }} />
+                            </a>
+                            <a href="https://discord.gg/DF3NZFhW7U" target="_blank" rel="noopener noreferrer" className="relative w-12 h-4 block">
+                                <Image src="/button3.gif" alt="Osu Peru" width={88} height={31} unoptimized sizes="88px" className="object-cover" style={{ imageRendering: 'pixelated' }} />
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" className="relative w-12 h-4 block">
+                                <Image src="/button4.gif" alt="Extra Button" width={88} height={31} unoptimized sizes="88px" className="object-cover" style={{ imageRendering: 'pixelated' }} />
+                            </a>
+                        </div>
+
                         <div className="w-full md:flex flex-col items-center gap-2 mt-1 md:mt-2 hidden">
 
                             <div className="grid grid-cols-2 gap-1.5 md:gap-2 w-max">
@@ -255,8 +279,8 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
 
                         <div className="grid grid-cols-4 md:grid-cols-4 gap-1 md:gap-3">
                             <div className="border border-white/5 rounded-md md:rounded-xl p-1.5 md:p-3 flex flex-col justify-center">
-                                <p className="text-slate-400 text-[8px] md:text-xs font-bold uppercase tracking-wider mb-0.5 md:mb-1 leading-tight truncate">{t.globalRank}</p>
-                                <p className="text-sm md:text-2xl font-black text-white drop-shadow-md leading-tight">#{osuStats.rank.toLocaleString()}</p>
+                                <p className="text-slate-400 text-[7px] md:text-[10px] lg:text-xs font-bold uppercase tracking-wider mb-0.5 md:mb-1 leading-tight truncate">{t.globalRank}</p>
+                                <p className="text-xs md:text-lg lg:text-2xl font-black text-white drop-shadow-md leading-tight">#{osuStats.rank.toLocaleString()}</p>
                             </div>
 
                             <div
@@ -264,11 +288,11 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                                 onClick={() => setShowTopPlays(true)}
                             >
                                 <div className="transition-all duration-300 group-hover/pp:opacity-0 group-hover/pp:-translate-y-4">
-                                    <p className="text-slate-400 text-[8px] md:text-xs font-bold uppercase tracking-wider mb-0.5 md:mb-1 flex justify-between items-center leading-tight truncate">
+                                    <p className="text-slate-400 text-[7px] md:text-[10px] lg:text-xs font-bold uppercase tracking-wider mb-0.5 md:mb-1 flex justify-between items-center leading-tight truncate">
                                         {t.totalPP}
                                         <svg className="w-2 h-2 md:w-3.5 md:h-3.5 text-cyan-400/80 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
                                     </p>
-                                    <p className="text-sm md:text-2xl font-black text-cyan-400/80 drop-shadow-md leading-tight">
+                                    <p className="text-xs md:text-lg lg:text-2xl font-black text-cyan-400/80 drop-shadow-md leading-tight">
                                         {osuStats.pp.toLocaleString()}
                                     </p>
                                 </div>
@@ -281,13 +305,13 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                             </div>
 
                             <div className="border border-white/5 rounded-md md:rounded-xl p-1.5 md:p-3 flex flex-col justify-center">
-                                <p className="text-slate-400 text-[8px] md:text-xs font-bold uppercase tracking-wider mb-0.5 md:mb-1 leading-tight truncate">{t.accuracy}</p>
-                                <p className="text-sm md:text-2xl font-black text-white drop-shadow-md leading-tight">{osuStats.accuracy}%</p>
+                                <p className="text-slate-400 text-[7px] md:text-[10px] lg:text-xs font-bold uppercase tracking-wider mb-0.5 md:mb-1 leading-tight truncate">{t.accuracy}</p>
+                                <p className="text-xs md:text-lg lg:text-2xl font-black text-white drop-shadow-md leading-tight">{osuStats.accuracy}%</p>
                             </div>
 
                             <div className="border border-white/5 rounded-md md:rounded-xl p-1.5 md:p-3 flex flex-col justify-center">
-                                <p className="text-slate-400 text-[8px] md:text-xs font-bold uppercase tracking-wider mb-0.5 md:mb-1 leading-tight truncate">{t.playcount}</p>
-                                <p className="text-sm md:text-2xl font-black text-white drop-shadow-md leading-tight">{osuStats.plays.toLocaleString()}</p>
+                                <p className="text-slate-400 text-[7px] md:text-[10px] lg:text-xs font-bold uppercase tracking-wider mb-0.5 md:mb-1 leading-tight truncate">{t.playcount}</p>
+                                <p className="text-xs md:text-lg lg:text-2xl font-black text-white drop-shadow-md leading-tight">{osuStats.plays.toLocaleString()}</p>
                             </div>
                         </div>
 
@@ -317,76 +341,6 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                             </div>
                         )}
 
-                        <div className="w-full flex md:hidden flex-row items-center justify-center gap-2 mt-3 pt-2 border-t border-white/5">
-                            <a
-                                href="https://osu.ppy.sh/teams/38254"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="relative w-12 h-4 block"
-                            >
-                                <Image
-                                    src="/button1.gif"
-                                    alt="Hoshinomori Aero Clan"
-                                    width={88}
-                                    height={31}
-                                    unoptimized
-                                    sizes="88px"
-                                    className="object-cover"
-                                    style={{ imageRendering: 'pixelated' }}
-                                />
-                            </a>
-                            <a
-                                href="https://discord.gg/Cvv69NB"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="relative w-12 h-4 block"
-                            >
-                                <Image
-                                    src="/button2.gif"
-                                    alt="Discord Server"
-                                    width={88}
-                                    height={31}
-                                    unoptimized
-                                    sizes="88px"
-                                    className="object-cover"
-                                    style={{ imageRendering: 'pixelated' }}
-                                />
-                            </a>
-                            <a
-                                href="https://discord.gg/DF3NZFhW7U"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="relative w-12 h-4 block"
-                            >
-                                <Image
-                                    src="/button3.gif"
-                                    alt="Osu Peru"
-                                    width={88}
-                                    height={31}
-                                    unoptimized
-                                    sizes="88px"
-                                    className="object-cover"
-                                    style={{ imageRendering: 'pixelated' }}
-                                />
-                            </a>
-                            <a
-                                href="#"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="relative w-12 h-4 block"
-                            >
-                                <Image
-                                    src="/button4.gif"
-                                    alt="Extra Button"
-                                    width={88}
-                                    height={31}
-                                    unoptimized
-                                    sizes="88px"
-                                    className="object-cover"
-                                    style={{ imageRendering: 'pixelated' }}
-                                />
-                            </a>
-                        </div>
                     </div>
                 </div>
 
@@ -506,7 +460,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                 </div>
             </div>
 
-            <div id="socials" className="scroll-mt-24 mt-6 md:mt-12 relative z-10 w-full flex flex-col gap-4">
+            <div id="socials" className="scroll-mt-24 mt-8 md:mt-12 relative z-10 w-full flex flex-col gap-4">
 
                 <div className="w-full flex flex-col">
                     <div className="w-full flex justify-start mb-2 md:mb-3">
@@ -517,7 +471,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                     <div className="w-full h-0.5 bg-slate-700/60 rounded-full shadow-inner"></div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full mt-2 max-w-md mx-auto lg:max-w-none">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full mt-2 max-w-md mx-auto md:max-w-none">
 
                     <div className="w-full flex flex-col">
                         <div className="border-b border-slate-700/50 pb-2 mb-4">
@@ -643,7 +597,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                 </div>
             </div>
 
-            <div className="w-full flex flex-col mt-6 mb-6 md:mt-16 md:mb-8">
+            <div className="w-full flex flex-col mt-8 mb-6 md:mt-16 md:mb-8">
                 <div id="gaming" className="scroll-mt-24 w-full flex justify-start mb-2 md:mb-3">
                     <h2 className="text-xl md:text-3xl text-white drop-shadow-md flex items-center gap-3" style={{ fontFamily: "'Quicksand', sans-serif", fontWeight: 700 }}>
                         Gaming Profile

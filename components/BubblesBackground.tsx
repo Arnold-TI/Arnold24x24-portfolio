@@ -11,8 +11,8 @@ export default function BubblesBackground() {
     const [bubbles, setBubbles] = useState<AnimatedBubble[]>([]);
 
     useEffect(() => {
-        const isMobile = window.innerWidth < 768;
-        const count = isMobile ? 8 : 18;
+        const width = window.innerWidth;
+        const count = width < 640 ? 4 : width < 1024 ? 7 : 14;
 
         const generatedBubbles: AnimatedBubble[] = Array.from({ length: count }).map((_, i) => ({
             id: i,
@@ -50,7 +50,7 @@ export default function BubblesBackground() {
                             '--wobble': `${b.wobble}px`,
                         } as React.CSSProperties}
                     >
-                        <div className="w-full h-full rounded-full border border-cyan-400/30 bg-cyan-400/10 shadow-[0_0_15px_rgba(34,211,238,0.15)]" />
+                        <div className="w-full h-full rounded-full border border-cyan-400/25 bg-cyan-400/10" />
                     </div>
                 </div>
             ))}

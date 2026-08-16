@@ -16,7 +16,7 @@ export default function Footer({ lang }: { lang: Lang }) {
 
     return (
         <>
-            <footer className="relative z-10 w-full border-t border-slate-800 bg-[#050b14]/90 backdrop-blur-md mt-0 md:mt-20">
+            <footer className="relative z-10 w-full border-t border-slate-800 bg-[#050b14]/90 backdrop-blur-md mt-0 lg:mt-20">
                 <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
                     <div className="flex flex-col items-center md:items-start gap-2">
                         <div className="flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity duration-300">

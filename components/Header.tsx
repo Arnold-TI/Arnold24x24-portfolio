@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { translations } from '@/lib/translations';
 import type { Lang, TabId } from '@/lib/types';
 
@@ -11,17 +12,18 @@ const TAB_IDS: TabId[] = ['home', 'setup', 'skins', 'diary', 'tips', 'contact'];
 
 interface HeaderProps {
     activeTab: TabId;
-    setActiveTab: (tab: TabId) => void;
     lang: Lang;
     setLang: (l: Lang) => void;
 }
 
-export default function Header({ activeTab, setActiveTab, lang, setLang }: HeaderProps) {
+export default function Header({ activeTab, lang, setLang }: HeaderProps) {
     const t = translations[lang];
     const [menuOpen, setMenuOpen] = useState(false);
+    const router = useRouter();
 
     const handleTabClick = (tab: TabId) => {
-        setActiveTab(tab);
+        setMenuOpen(false);
+        router.push(tab === 'home' ? '/' : `/${tab}`);
     };
 
     return (
