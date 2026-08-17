@@ -1,7 +1,8 @@
 import type { Lang } from './types';
 
 const es = {
-    nav: ['home', 'setup', 'skins', 'diary', 'tips', 'contact'],
+    nav: ['home', 'setup', 'skins', 'diary', 'tips'],
+    contactFooter: 'contacto',
     heroTitleQuestion: '¿QUÉ VERÁS EN',
     heroTitleHighlight: 'ESTA PÁGINA?',
     heroDescription: 'Aquí encontrarás todas las skins que uso, todas mis redes sociales y algunos datos adicionales sobre mí. Desde mis estadísticas de osu!, hasta mis setups y configuraciones. He querido unificar todo en un solo lugar para tener más orden sobre mi contenido y que puedan saber más acerca de mi. Iré actualizando la página gradualmente con nueva información y proyectos que haga o tenga en mente. ¡Gracias por su visita!',
@@ -33,6 +34,7 @@ const es = {
     viewOsuProfileTooltip: 'Ver perfil de osu!',
     setupSubtitle: 'Periféricos principales que uso, especificaciones\nrelevantes y configuraciones que a alguno le interesará',
     viewOnAmazon: 'Ver en Amazon',
+    viewOnAliExpress: 'Ver en AliExpress',
     viewDetails: 'Detalles',
     currentSkinsHeader: 'current skins',
     oldSkinsHeader: 'old skins',
@@ -74,7 +76,8 @@ const es = {
 };
 
 const en: typeof es = {
-    nav: ['home', 'setup', 'skins', 'diary', 'tips', 'contact'],
+    nav: ['home', 'setup', 'skins', 'diary', 'tips'],
+    contactFooter: 'contact',
     heroTitleQuestion: 'WHAT WILL YOU FIND',
     heroTitleHighlight: 'HERE?',
     heroDescription: 'Here you will find all the skins I use, all my social media, and some additional facts about me. From my osu! stats to my setups and configurations. I wanted to unify everything in one place to have better organization over my content and let you know more about me. I will be updating the page gradually with new information and projects I make or have in mind. Thanks for visiting!',
@@ -106,6 +109,7 @@ const en: typeof es = {
     viewOsuProfileTooltip: 'View osu! profile',
     setupSubtitle: 'Main peripherals I use, relevant specs,\nand configurations some might find interesting',
     viewOnAmazon: 'View on Amazon',
+    viewOnAliExpress: 'View on AliExpress',
     viewDetails: 'Details',
     currentSkinsHeader: 'current skins',
     oldSkinsHeader: 'old skins',

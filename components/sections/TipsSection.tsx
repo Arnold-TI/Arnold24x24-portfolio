@@ -71,7 +71,7 @@ export default function TipsSection({ lang, openTips, toggleTip }: TipsSectionPr
                                         <svg className={`w-5 h-5 text-slate-400 transform transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                                     </button>
 
-                                    <div className={`overflow-hidden transition-all duration-700 ease-in-out ${isOpen ? 'max-h-[3000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                                    <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[3000px] opacity-100' : 'max-h-0 opacity-0'}`}>
                                         <div className="px-6 pb-6 text-slate-400 font-medium text-xs md:text-base leading-relaxed border-t border-slate-700/30 pt-4 mt-2">
                                             {tip.respuesta}
                                         </div>

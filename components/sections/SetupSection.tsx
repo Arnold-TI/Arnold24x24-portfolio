@@ -60,8 +60,8 @@ export default function SetupSection({ lang, onOpenLightbox }: SetupSectionProps
                 <div className="w-[calc(100%-3rem)] mx-6 md:mx-auto h-0.5 bg-slate-700/60 rounded-full shadow-inner mb-12"></div>
 
                 <div className="w-[calc(100%-3rem)] max-w-5xl relative px-4 md:px-8 py-4 mx-6 md:mx-auto">
-                    <div className="absolute top-0 left-0 w-px h-full bg-linear-to-b from-slate-600/50 via-transparent to-slate-600/50"></div>
-                    <div className="absolute top-0 right-0 w-px h-full bg-linear-to-b from-slate-600/50 via-transparent to-slate-600/50"></div>
+                    <div className="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-slate-600/50 via-transparent to-slate-600/50"></div>
+                    <div className="absolute top-0 bottom-0 right-0 w-px bg-linear-to-b from-slate-600/50 via-transparent to-slate-600/50"></div>
 
                     <div className="absolute top-0 left-0 w-6 h-px bg-slate-600/50"></div>
                     <div className="absolute top-0 right-0 w-6 h-px bg-slate-600/50"></div>
@@ -102,14 +102,20 @@ export default function SetupSection({ lang, onOpenLightbox }: SetupSectionProps
                                             {item.name}
                                         </h3>
 
-                                        <div className="flex items-center gap-1.5 md:gap-3 flex-wrap mt-auto md:mt-3 pb-8 md:pb-0">
-                                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 md:gap-2 px-3 py-1.5 md:px-5 md:py-2.5 bg-white/5 border border-slate-600 rounded-full text-[10px] md:text-xs font-bold text-slate-300 hover:text-white hover:bg-white/10 hover:border-slate-400 transition-all backdrop-blur-sm cursor-pointer">
+                                        <div className={`flex items-center gap-1.5 md:gap-3 flex-wrap w-full mt-3 ${isEven ? 'justify-end' : 'justify-start'}`}>
+                                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 md:gap-2 px-3 py-1.5 md:px-5 md:py-2.5 bg-white/5 border border-slate-600 rounded-full text-[10px] md:text-xs font-bold text-slate-300 hover:text-white hover:bg-white/10 hover:border-slate-400 transition-all cursor-pointer">
                                                 {t.viewOnAmazon}
                                                 <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                                             </a>
+                                            {item.aliexpress && (
+                                                <a href={item.aliexpress} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 md:gap-2 px-3 py-1.5 md:px-5 md:py-2.5 bg-orange-500/10 border border-orange-500/40 rounded-full text-[10px] md:text-xs font-bold text-orange-300 hover:text-orange-100 hover:bg-orange-500/20 hover:border-orange-400/60 transition-all cursor-pointer">
+                                                    {t.viewOnAliExpress}
+                                                    <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                                </a>
+                                            )}
                                             <button
                                                 onClick={() => toggleDetails(idx)}
-                                                className="flex items-center gap-1 md:gap-2 px-3 py-1.5 md:px-5 md:py-2.5 bg-[#102a54]/70 border border-slate-600/70 rounded-full text-[10px] md:text-xs font-bold text-slate-200 hover:text-white hover:bg-[#1a3a6a] hover:border-slate-500 transition-all backdrop-blur-sm cursor-pointer"
+                                                className="flex items-center gap-1 md:gap-2 px-3 py-1.5 md:px-5 md:py-2.5 bg-[#102a54]/70 border border-slate-600/70 rounded-full text-[10px] md:text-xs font-bold text-slate-200 hover:text-white hover:bg-[#1a3a6a] hover:border-slate-500 transition-all cursor-pointer"
                                             >
                                                 {t.viewDetails}
                                                 <svg className={`w-2.5 h-2.5 md:w-3.5 md:h-3.5 transition-transform duration-300 ${openDetails === idx ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
@@ -129,7 +135,6 @@ export default function SetupSection({ lang, onOpenLightbox }: SetupSectionProps
                                                         <p className="text-slate-300 text-xs md:text-base leading-relaxed font-medium drop-shadow-md p-2.5 md:p-4 pr-6 md:pr-10 text-left">
                                                             {item.desc}
                                                         </p>
-                                                        <div className="absolute bottom-0 left-0 right-0 h-10 bg-linear-to-t from-[#0a1324] to-transparent pointer-events-none rounded-b-xl"></div>
                                                     </div>
                                                 </motion.div>
                                             )}

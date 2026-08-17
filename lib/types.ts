@@ -1,5 +1,5 @@
 export type Lang = 'es' | 'en';
-export type TabId = 'home' | 'setup' | 'skins' | 'diary' | 'tips' | 'contact';
+export type TabId = 'home' | 'setup' | 'skins' | 'diary' | 'tips';
 
 export interface Bubble {
     id: number;
@@ -82,6 +82,7 @@ export interface SetupItem {
     img: string;
     desc: string;
     link: string;
+    aliexpress?: string;
     screenshots?: string[];
     objectPos?: string;
 }

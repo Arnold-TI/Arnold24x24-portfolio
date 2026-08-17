@@ -77,10 +77,12 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                         <div className="w-[calc(100%-3rem)] mx-6 md:mx-auto h-0.5 bg-slate-700/60 rounded-full shadow-inner mb-12"></div>
 
                         <div className="w-[calc(100%-3rem)] max-w-5xl relative px-4 md:px-8 py-2 mx-6 md:mx-auto">
-                            <div className="absolute top-0 left-0 w-px h-full bg-linear-to-b from-cyan-700/60 via-slate-700/30 to-transparent"></div>
-                            <div className="absolute top-0 right-0 w-px h-full bg-linear-to-b from-cyan-700/60 via-slate-700/30 to-transparent"></div>
+                            <div className="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-cyan-600/70 via-cyan-700/40 to-cyan-800/60"></div>
+                            <div className="absolute top-0 bottom-0 right-0 w-px bg-linear-to-b from-cyan-600/70 via-cyan-700/40 to-cyan-800/60"></div>
                             <div className="absolute top-0 left-0 w-6 h-px bg-cyan-700/60"></div>
                             <div className="absolute top-0 right-0 w-6 h-px bg-cyan-700/60"></div>
+                            <div className="absolute bottom-0 left-0 w-6 h-px bg-cyan-700/60"></div>
+                            <div className="absolute bottom-0 right-0 w-6 h-px bg-cyan-700/60"></div>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
                                 {currentSkins.map((skin) => (
                                     <SkinCard key={skin.title} skin={skin} previewActive={activePreviewKey === skin.title} onCardClick={handleCardClick} />
@@ -95,8 +97,8 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                                 <div
                                     className="absolute top-0 left-0 h-full w-[90%] md:w-[70%] z-0"
                                     style={{
-                                        maskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)',
-                                        WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)'
+                                        maskImage: 'linear-gradient(to bottom, black 0%, black 80%, transparent 100%)',
+                                        WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 80%, transparent 100%)'
                                     }}
                                 >
                                     <div
@@ -117,11 +119,13 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                         <div className="w-[calc(100%-3rem)] max-w-5xl mx-6 md:mx-auto h-0.5 bg-slate-700/60 rounded-full shadow-inner mb-12"></div>
 
                         <div className="w-[calc(100%-3rem)] max-w-5xl relative px-4 md:px-8 py-2 mx-6 md:mx-auto">
-                            <div className="absolute top-0 left-0 w-px h-full bg-linear-to-b from-slate-600/50 via-slate-800/30 to-transparent"></div>
-                            <div className="absolute top-0 right-0 w-px h-full bg-linear-to-b from-slate-600/50 via-slate-800/30 to-transparent"></div>
+                            <div className="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-slate-600/60 via-slate-700/40 to-slate-800/60"></div>
+                            <div className="absolute top-0 bottom-0 right-0 w-px bg-linear-to-b from-slate-600/60 via-slate-700/40 to-slate-800/60"></div>
 
                             <div className="absolute top-0 left-0 w-6 h-px bg-slate-600/50"></div>
                             <div className="absolute top-0 right-0 w-6 h-px bg-slate-600/50"></div>
+                            <div className="absolute bottom-0 left-0 w-6 h-px bg-slate-600/50"></div>
+                            <div className="absolute bottom-0 right-0 w-6 h-px bg-slate-600/50"></div>
 
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
                                 {oldSkins.map((skin) => (

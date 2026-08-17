@@ -14,10 +14,23 @@ export default function BubblesBackground() {
         const width = window.innerWidth;
         const count = width < 640 ? 4 : width < 1024 ? 7 : 14;
 
+        const getLeft = () => {
+            if (width < 1024) return Math.random() * 100;
+
+            const r = Math.random();
+            if (r < 0.4) {
+                return Math.pow(Math.random(), 2) * 42;
+            }
+            if (r < 0.8) {
+                return 100 - Math.pow(Math.random(), 2) * 42;
+            }
+            return 38 + Math.random() * 24;
+        };
+
         const generatedBubbles: AnimatedBubble[] = Array.from({ length: count }).map((_, i) => ({
             id: i,
             size: Math.random() * 40 + 10,
-            left: `${Math.random() * 100}%`,
+            left: `${getLeft()}%`,
             duration: Math.random() * 15 + 15,
             delay: Math.random() * -30,
             wobble: Math.random() * 30 + 15,

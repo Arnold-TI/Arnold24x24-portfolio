@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 import { translations } from '@/lib/translations';
 import type { Lang, TabId } from '@/lib/types';
 
-const TAB_IDS: TabId[] = ['home', 'setup', 'skins', 'diary', 'tips', 'contact'];
+const TAB_IDS: TabId[] = ['home', 'setup', 'skins', 'diary', 'tips'];
 
 interface HeaderProps {
     activeTab: TabId;
@@ -45,8 +45,8 @@ export default function Header({ activeTab, lang, setLang }: HeaderProps) {
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
                     </button>
 
-                    <div className="flex items-center gap-2 cursor-pointer group">
-                        <div className="relative w-9 h-9 md:w-10 md:h-10 overflow-hidden rounded-lg border border-slate-700 group-hover:border-cyan-400 group-hover:shadow-[0_0_10px_rgba(34,211,238,0.5)] transition-all duration-300 flex items-center justify-center bg-[#0f172a]">
+                    <div className="flex items-center gap-2 group">
+                        <div className="relative w-9 h-9 md:w-10 md:h-10 overflow-hidden rounded-lg border border-slate-700 group-hover:border-cyan-400 group-hover:shadow-[0_0_12px_rgba(165,243,252,0.35)] transition-all duration-300 flex items-center justify-center bg-[#0f172a]">
                             <Image
                                 src="/logo.png"
                                 alt="Logo"

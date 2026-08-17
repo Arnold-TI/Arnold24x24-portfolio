@@ -246,14 +246,14 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                                 </a>
 
                                 <a
-                                    href="#"
+                                    href="https://arnold24x24.vercel.app/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="relative w-12 h-4 md:w-22 md:h-7.75 block"
                                 >
                                     <Image
                                         src="/button4.gif"
-                                        alt="Extra Button"
+                                        alt="Arnolds website"
                                         width={88}
                                         height={31}
                                         unoptimized
@@ -471,7 +471,19 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                     <div className="w-full h-0.5 bg-slate-700/60 rounded-full shadow-inner"></div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full mt-2 max-w-md md:max-w-3xl mx-auto">
+                <div className="absolute bottom-0 right-0 w-56 md:w-72 lg:w-80 h-72 md:h-96 lg:h-104 overflow-hidden pointer-events-none z-0 opacity-90 select-none">
+                    <div className="absolute bottom-0 right-0 w-60 md:w-72 lg:w-88 aspect-[720/1110] translate-x-1/4 translate-y-1/4">
+                        <Image
+                            src="/silueta.png"
+                            alt=""
+                            fill
+                            sizes="(max-width: 768px) 240px, 352px"
+                            className="object-contain drop-shadow-[0_0_45px_rgba(56,189,248,0.35)]"
+                        />
+                    </div>
+                </div>
+
+                <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-full">
 
                     <div className="w-full flex flex-col">
                         <div className="border-b border-slate-700/50 pb-2 mb-4">
@@ -484,27 +496,13 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                             </a>
                         </div>
 
-                        <div className="flex flex-col justify-center h-full border border-slate-700/50 rounded-xl relative overflow-hidden bg-[#0f172a]/60 hover:border-slate-500/50 backdrop-blur-md transition-all duration-300">
+                        <div className="flex flex-col justify-center h-full border border-slate-700/50 rounded-xl relative overflow-hidden bg-slate-900/50 hover:border-slate-500/50 backdrop-blur-md transition-all duration-300">
                             <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none z-0">
                                 <svg className="w-48 h-48 md:w-64 md:h-64 text-[#6366f1]" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z" /></svg>
                             </div>
 
                             <div className="relative z-10 w-full h-full">
                                 <TwitchStatsCard lang={lang} />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="w-full flex flex-col">
-                        <div className="relative w-full h-64 md:h-full md:min-h-80 flex items-center justify-center">
-                            <div className="relative w-[85%] h-[85%]">
-                                <Image
-                                    src="/silueta.png"
-                                    alt="Imagen Decorativa"
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, 400px"
-                                    className="object-contain"
-                                />
                             </div>
                         </div>
                     </div>
@@ -519,7 +517,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                             </a>
                         </div>
 
-                        <div className="flex flex-col justify-center h-full border border-slate-700/50 rounded-xl p-4 md:p-5 relative overflow-hidden bg-[#0f172a]/60 hover:border-slate-500/50 backdrop-blur-md transition-all duration-300">
+                        <div className="flex flex-col justify-center h-full border border-slate-700/50 rounded-xl p-4 md:p-5 relative overflow-hidden bg-slate-900/50 hover:border-slate-500/50 backdrop-blur-md transition-all duration-300">
                             <div className="relative z-10 flex flex-col gap-3 w-full">
                                 <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">{t.recommendations}</h4>
 
@@ -558,7 +556,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                         </div>
                     </div>
 
-                    <div className="w-full flex flex-col">
+                    <div className="w-full flex flex-col md:col-span-2 lg:col-span-1">
                         <div className="border-b border-slate-700/50 pb-2 mb-4">
                             <a href="https://x.com/Arnold24x24" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 w-fit group cursor-pointer transition-transform duration-300 hover:-translate-y-1">
                                 <svg className="w-5 h-5 md:w-6 md:h-6 text-white group-hover:text-cyan-400/80 transition-all duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
@@ -568,11 +566,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                             </a>
                         </div>
 
-                        <div className="flex flex-col justify-center h-full border border-slate-700/50 rounded-xl p-4 md:p-5 relative overflow-hidden bg-[#0f172a]/60 hover:border-slate-500/50 backdrop-blur-md transition-all duration-300">
-                            <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none z-0">
-                                <svg className="w-48 h-48 md:w-64 md:h-64 text-sky-400" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                            </div>
-
+                        <div className="flex flex-col justify-center h-full border border-slate-700/50 rounded-xl p-4 md:p-5 relative overflow-hidden bg-slate-900/50 hover:border-slate-500/50 backdrop-blur-md transition-all duration-300">
                             <div className="relative z-10 flex flex-col gap-3 w-full">
                                 <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">{t.relevantTweets}</h4>
 

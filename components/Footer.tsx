@@ -2,17 +2,25 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import ContactCard from '@/components/sections/ContactCard';
 import { translations } from '@/lib/translations';
 import type { Lang } from '@/lib/types';
 
-export default function Footer({ lang }: { lang: Lang }) {
+interface FooterProps {
+    lang: Lang;
+    handleCopy: (text: string) => void;
+    copiedId: string | null;
+}
+
+export default function Footer({ lang, handleCopy, copiedId }: FooterProps) {
     const [showCredits, setShowCredits] = useState(false);
+    const [showContact, setShowContact] = useState(false);
     const t = translations[lang];
 
     useEffect(() => {
-        if (showCredits) document.body.style.overflow = 'hidden';
+        if (showCredits || showContact) document.body.style.overflow = 'hidden';
         else document.body.style.overflow = 'unset';
-    }, [showCredits]);
+    }, [showCredits, showContact]);
 
     return (
         <>
@@ -30,12 +38,20 @@ export default function Footer({ lang }: { lang: Lang }) {
                         </p>
                     </div>
 
-                    <button
-                        onClick={() => setShowCredits(true)}
-                        className="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-cyan-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] duration-300 cursor-pointer"
-                    >
-                        {t.creditsAndAttributions}
-                    </button>
+                    <div className="flex flex-col items-center md:items-end gap-3">
+                        <button
+                            onClick={() => setShowContact(true)}
+                            className="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-cyan-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] duration-300 cursor-pointer"
+                        >
+                            {t.contactFooter}
+                        </button>
+                        <button
+                            onClick={() => setShowCredits(true)}
+                            className="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-cyan-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] duration-300 cursor-pointer"
+                        >
+                            {t.creditsAndAttributions}
+                        </button>
+                    </div>
                 </div>
             </footer>
 
@@ -133,6 +149,23 @@ export default function Footer({ lang }: { lang: Lang }) {
                             </div>
 
                         </div>
+                    </div>
+                </div>
+            )}
+
+            {showContact && (
+                <div
+                    className="fixed inset-0 z-200 bg-[#050b14]/80 backdrop-blur-md flex items-center justify-center p-4 opacity-100 transition-opacity duration-300"
+                    onClick={() => setShowContact(false)}
+                >
+                    <div
+                        className="w-full max-w-2xl relative"
+                        onClick={e => e.stopPropagation()}
+                    >
+                        <button onClick={() => setShowContact(false)} className="absolute top-4 right-4 z-10 text-slate-400 hover:text-rose-400 transition-colors cursor-pointer">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                        </button>
+                        <ContactCard lang={lang} handleCopy={handleCopy} copiedId={copiedId} />
                     </div>
                 </div>
             )}

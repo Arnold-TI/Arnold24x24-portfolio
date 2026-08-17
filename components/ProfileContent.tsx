@@ -12,10 +12,9 @@ import SetupSection from '@/components/sections/SetupSection';
 import SkinsSection from '@/components/sections/SkinsSection';
 import DiarySection from '@/components/sections/DiarySection';
 import TipsSection from '@/components/sections/TipsSection';
-import ContactSection from '@/components/sections/ContactSection';
 import type { Lang, OsuBadge, OsuSkin, OsuStats, TabId, TopPlay } from '@/lib/types';
 
-const TAB_IDS: TabId[] = ['home', 'setup', 'skins', 'diary', 'tips', 'contact'];
+const TAB_IDS: TabId[] = ['home', 'setup', 'skins', 'diary', 'tips'];
 
 const getTabFromPath = (pathname: string): TabId => {
     const segment = pathname.split('/')[1] as TabId;
@@ -164,9 +163,6 @@ export default function ProfileContent() {
                     <TipsSection lang={lang} openTips={openTips} toggleTip={toggleTip} />
                 )}
 
-                {activeTab === 'contact' && (
-                    <ContactSection lang={lang} handleCopy={handleCopy} copiedId={copiedId} />
-                )}
             </div>
 
             {lightboxIndex !== null && selectedSkin?.screenshots && (
@@ -179,7 +175,7 @@ export default function ProfileContent() {
 
             <MusicPlayer />
 
-            <Footer lang={lang} />
+            <Footer lang={lang} handleCopy={handleCopy} copiedId={copiedId} />
         </main>
     );
 }
