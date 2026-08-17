@@ -472,7 +472,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                 </div>
 
                 <div className="absolute bottom-0 right-0 w-56 md:w-72 lg:w-80 h-72 md:h-96 lg:h-104 overflow-hidden pointer-events-none z-0 opacity-90 select-none">
-                    <div className="absolute bottom-0 right-0 w-60 md:w-72 lg:w-88 aspect-[720/1110] translate-x-1/4 translate-y-1/4">
+                    <div className="absolute bottom-0 right-0 w-60 md:w-72 lg:w-88 aspect-720/1110 translate-x-1/4 translate-y-1/4">
                         <Image
                             src="/silueta.png"
                             alt=""

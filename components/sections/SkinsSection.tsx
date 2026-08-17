@@ -153,7 +153,7 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                             {t.backToCatalog}
                         </button>
 
-                        <div className="w-full aspect-video md:aspect-[21/9] md:h-112.5 relative rounded-2xl md:rounded-3xl overflow-hidden border border-slate-700/50 shadow-[0_0_30px_rgba(0,0,0,0.8)] mx-auto max-w-full">
+                        <div className="w-full aspect-video md:aspect-21/9 md:h-112.5 relative rounded-2xl md:rounded-3xl overflow-hidden border border-slate-700/50 shadow-[0_0_30px_rgba(0,0,0,0.8)] mx-auto max-w-full">
                             <Image
                                 src={selectedSkin.banner || selectedSkin.img}
                                 alt={selectedSkin.title}
