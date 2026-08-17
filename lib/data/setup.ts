@@ -48,7 +48,7 @@ const es: SetupItem[] = [
     {
         name: "Raptor HE Gaming Switch",
         img: "/switches_keyboard.jpg",
-        desc: "Switches magnéticos linear hall efect. Los tengo ensamblados en las dos flechas direccionales de mi Womier (izquierda, derecha). Son muy ligeros y responsivos. Algún día probaré su v2.",
+        desc: "Switches magnéticos linear hall effect. Los tengo ensamblados en las dos flechas direccionales de mi Womier (izquierda, derecha). Son muy ligeros y responsivos. Algún día probaré su v2.",
         link: "https://amzn.to/4g9IfKD",
         aliexpress: "https://es.aliexpress.com/item/1005010231237425.html?spm=a2g0o.productlist.main.3.502519Wm19WmOJ&algo_pvid=301f0420-0e02-4336-870b-eb215085083c&algo_exp_id=301f0420-0e02-4336-870b-eb215085083c-2&pdp_ext_f=%7B%22order%22%3A%22731%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21PEN%2122.12%2122.12%21%21%2143.00%2143.00%21%402103081117869591153726962e0cbb%2112000057833898496%21sea%21PE%21882598191%21ACX%211%210%21n_tag%3A-29919%3Bd%3Aef2b5d83%3Bm03_new_user%3A-29894&curPageLogUid=2XrxyB3Pwj8Z&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005010231237425%7C_p_origin_prod%3A",
         objectPos: "top"

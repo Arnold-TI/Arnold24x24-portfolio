@@ -4,24 +4,24 @@ export const diaryData: DiaryItem[] = [
     {
         id: 1,
         tipo: 'dato',
-        titulo: 'REGISTRO_01: Origen del nick Arnold24x24',
-        tituloEn: 'REG_01: Origin of the nickname Arnold24x24',
-        contenido: 'El nick es una mezcla de mi nombre real + la fecha de mi cumpleaños multiplicado por el mismo número. Ese nick lo improvisé como medida de último minuto al querer usar el nick de "Arnold24" para el videojuego Crazy Combi 3D (actualmente muerto), ya que ese nick ya habíá sido tomado. En ese entonces tenía 9 años y colocar una "x" se me hacía genial y llamativo. La "x" lo puse el costado del 24 y repetí el mismo número para que no se sienta incompleto y pareciera que se está multiplicando.',
+        titulo: '[ 2009 ]: Origen del nick Arnold24x24',
+        tituloEn: '[ 2009 ]: Origin of the nickname Arnold24x24',
+        contenido: 'El nick es una mezcla de mi nombre real + la fecha de mi cumpleaños multiplicado por el mismo número. Ese nick lo improvisé como medida de último minuto al querer usar el nick de "Arnold24" para el videojuego Crazy Combi 3D (actualmente muerto), ya que ese nick ya había sido tomado. En ese entonces tenía 9 años y colocar una "x" se me hacía genial y llamativo. La "x" lo puse el costado del 24 y repetí el mismo número para que no se sienta incompleto y pareciera que se está multiplicando.',
         contenidoEn: 'The nickname is a mix of my real name + my birthday date multiplied by the same number. I improvised that nickname as a last-minute measure when I wanted to use "Arnold24" for the video game Crazy Combi 3D (currently dead), since that nickname was already taken. Back then I was 9 years old and putting an "x" seemed cool and catchy to me. I placed the "x" next to 24 and repeated the same number so it wouldn\'t feel incomplete and looked like it was being multiplied.'
     },
     {
         id: 2,
         tipo: 'dato',
-        titulo: 'Registro_02: Canal de Youtube',
-        tituloEn: 'Reg_02: Youtube Channel',
+        titulo: '[ 2011/2012 ]: Canal de Youtube',
+        tituloEn: '[ 2011/2012 ]: Youtube Channel',
         contenido: 'Mi nick lo iba usando con frecuencia desde entonces en algunos portales del internet del 2009 - 2011 (incluído mi canal de youtube), pero no fue hasta el 2012 que empecé a crear contenido. En ese entonces consumía bastante contenido de misterios, mitos, datos, curiosidades, tops enfocados generalmente al mundo de los videojuegos. La mayoría de dicho contenido se realizaban usando el sintetizador de voz "loquendo". Un día me dije "¿Y por qué no subo videos parecidos?" - Esa fue mi motivación principal.',
         contenidoEn: 'I kept using my nickname frequently from then on across various internet portals from 2009 - 2011 (including my YouTube channel), but it wasn\'t until 2012 that I started creating content. Back then I consumed a lot of mystery, myth, fact, trivia, and top-list content generally focused on the video game world. Most of that content was made using the "loquendo" text-to-speech synthesizer. One day I told myself, "Why don\'t I upload similar videos?" - That was my main motivation.'
     },
     {
         id: 3,
         tipo: 'dato',
-        titulo: 'Registro_03: Legado del canal',
-        tituloEn: 'Reg_03: Channel Legacy',
+        titulo: 'Fun_Fact: Legado del canal',
+        tituloEn: 'Fun_Fact: Channel Legacy',
         contenido: 'Varios de mis primeros videos los puse en "privado" debido al cambio repentino del canal - de ser un espacio sobre videojuegos usando loquendo a ser un canal enfocado netamente en osu. Varios de esos videos me daban verguenza que sigan en mi canal por lo "raros" que eran. Sim embargo, he decidido rescatarlos y publicarlos en esta página para el que quiera verlos.',
         contenidoEn: 'Several of my first videos were set to "private" due to the sudden shift in the channel - going from a loquendo video game space to a channel focused purely on osu! Several of those videos embarrassed me to keep on my channel because of how "weird" they were. However, I have decided to rescue them and publish them on this page for anyone who wants to see them.'
     },
@@ -37,16 +37,16 @@ export const diaryData: DiaryItem[] = [
     {
         id: 5,
         tipo: 'dato',
-        titulo: 'REGISTRO_04: Constancia',
-        tituloEn: 'REG_04: Consistency',
+        titulo: 'Fun_Fact: Constancia',
+        tituloEn: 'Fun_Fact: Consistency',
         contenido: 'Después del primer video, me empezó a gustar y seguí subiendo videos. Todos eran sobre temas que había visto en otros videos.',
         contenidoEn: 'After the first video, I started liking it and kept uploading videos. All of them were about topics I had seen in other videos.'
     },
     {
         id: 6,
         tipo: 'dato',
-        titulo: 'REGISTRO_05: Fuentes',
-        tituloEn: 'REG_05: Sources',
+        titulo: 'Fun_Fact: Fuentes',
+        tituloEn: 'Fun_Fact: Sources',
         contenido: 'En ese entonces no tenía idea de cómo hacer un video, así que me basaba en otros videos para hacer los míos. Las fuentes lo podía sacar de otros creadores de contenido o de Taringa, Wikipedia, Yahoo Respuestas. Todos mis primeros videos fueron hechos con el programa "Camstasia Studio 8".',
         contenidoEn: 'Back then I had no idea how to make a video, so I based mine on other videos. Sources could come from other content creators or Taringa, Wikipedia, Yahoo Answers. All my first videos were made with the program "Camtasia Studio 8".'
     },
@@ -143,8 +143,8 @@ export const diaryData: DiaryItem[] = [
     {
         id: 17,
         tipo: 'dato',
-        titulo: 'Dato_Random: Esta sección le falta más contenido',
-        tituloEn: 'Random_Fact: This section needs more content',
+        titulo: 'Fun_Fact: Esta sección le falta más contenido',
+        tituloEn: 'Fun_Fact: This section needs more content',
         contenido: 'Esta sección será la que más se irá actualizando. Me entretengo mucho y nunca acabaré si sigo asi lol',
         contenidoEn: 'This section will be updated the most. I get too entertained and will never finish if I keep going lol'
     }
