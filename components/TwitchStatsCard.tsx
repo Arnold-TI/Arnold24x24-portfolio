@@ -7,6 +7,7 @@ import type { Lang, TwitchData } from '@/lib/types';
 
 export default function TwitchStatsCard({ lang }: { lang: Lang }) {
     const [twitchData, setTwitchData] = useState<TwitchData | null>(null);
+    const [vodLoaded, setVodLoaded] = useState(false);
     const t = translations[lang];
 
     useEffect(() => {
@@ -121,16 +122,22 @@ export default function TwitchStatsCard({ lang }: { lang: Lang }) {
                 href={`https://twitch.tv/${user.name || 'arnold24x24'}/videos`}
                 target="_blank"
                 rel="noopener noreferrer"
+                onMouseEnter={() => { setVodLoaded(true); }}
+                onFocus={() => { setVodLoaded(true); }}
                 className="relative z-10 w-full aspect-video max-w-[20rem] mx-auto mt-auto rounded-lg overflow-hidden border border-slate-700/50 group cursor-pointer flex items-center justify-center bg-[#050b14]/50 hover:border-[#a970ff]/50 transition-colors"
             >
-                <video
-                    src="/vod-bg.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity duration-500"
-                />
+                {vodLoaded ? (
+                    <video
+                        src="/vod-bg.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity duration-500"
+                    />
+                ) : (
+                    <div className="absolute inset-0 w-full h-full bg-[#0f172a] opacity-20" />
+                )}
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-colors duration-500"></div>
 
                 <div className="relative z-10 flex flex-col items-center transition-transform duration-300 group-hover:-translate-y-1">
