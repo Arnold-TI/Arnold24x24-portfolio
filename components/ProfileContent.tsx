@@ -112,6 +112,11 @@ export default function ProfileContent() {
     return (
         <main className="relative min-h-screen flex flex-col text-white overflow-x-hidden">
             <BubblesBackground />
+            <link rel="preload" as="image" href="/banner-setup.jpg" />
+            <link rel="preload" as="image" href="/banner-tips.jpg" />
+            <link rel="preload" as="image" href="/banner-miku-current.png" />
+            <link rel="preload" as="image" href="/banner-miku-oldd.png" />
+            <link rel="preload" as="image" href="/diary.jpg" />
             <Header
                 activeTab={activeTab}
                 lang={lang}
