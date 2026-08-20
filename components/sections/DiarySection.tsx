@@ -62,11 +62,14 @@ export default function DiarySection({ lang }: { lang: Lang }) {
                     <div className="w-full h-0.5 bg-slate-700/60 rounded-full shadow-inner mb-12"></div>
 
                     <div ref={timelineRef} className="relative w-full max-w-5xl mx-auto">
+                        {/* Profundidad dinámica: oscurecimiento progresivo conforme se desciende */}
                         <motion.div
                             style={{ opacity: depthOverlay }}
-                            className="pointer-events-none absolute -inset-x-4 md:-inset-x-8 lg:-inset-x-12 top-0 -bottom-20 z-0 bg-linear-to-b from-[#01030a]/20 via-[#01030a]/55 to-[#01030a]"
+                            className="pointer-events-none absolute -inset-x-4 -inset-y-8 bg-[#01030a] z-0"
                         />
+                        <div className="pointer-events-none absolute -inset-x-4 -inset-y-8 bg-linear-to-b from-transparent via-[#02040a]/20 to-[#01030a]/70 z-0" />
 
+                        {/* Sonda luminosa central */}
                         <div className="absolute left-5 lg:left-1/2 lg:-translate-x-1/2 top-0 bottom-0 z-[1]">
                             <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-linear-to-b from-cyan-200/70 via-cyan-400/25 to-cyan-200/10"></div>
                             <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[3px] blur-[3px] bg-cyan-300/30"></div>
@@ -85,6 +88,7 @@ export default function DiarySection({ lang }: { lang: Lang }) {
                                 return (
                                     <div key={item.id} className="relative lg:grid lg:grid-cols-2 lg:gap-x-24 lg:items-center mb-8 lg:mb-14">
 
+                                        {/* Nodo: fecha/label sobre la línea + punto luminoso */}
                                         <div className="absolute left-5 lg:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center">
                                             <span className="hidden lg:inline-block font-mono text-[10px] md:text-xs text-rose-400/90 uppercase tracking-widest whitespace-nowrap px-2 py-1 bg-[#050b14]/70 border border-rose-500/30 rounded-full backdrop-blur-sm mb-2 shadow-[0_0_14px_rgba(244,63,94,0.28)]">
                                                 {nodeLabel}
@@ -92,8 +96,10 @@ export default function DiarySection({ lang }: { lang: Lang }) {
                                             <span className="w-3 h-3 rounded-full bg-cyan-200 shadow-[0_0_16px_rgba(103,232,249,0.9)] ring-2 ring-cyan-300/30"></span>
                                         </div>
 
+                                        {/* Cable de conexión hacia la tarjeta (desktop) */}
                                         <span className={`hidden lg:block absolute top-1/2 -translate-y-1/2 h-px w-14 ${isLeft ? 'right-1/2 bg-linear-to-l from-cyan-200/60 to-transparent' : 'left-1/2 bg-linear-to-r from-cyan-200/60 to-transparent'}`}></span>
 
+                                        {/* Cable de conexión (mobile) */}
                                         <span className="lg:hidden absolute left-5 top-1/2 -translate-y-1/2 h-px w-4 bg-linear-to-r from-cyan-200/60 to-transparent"></span>
 
                                         <div className={`ml-12 lg:ml-0 ${isLeft ? 'lg:col-start-1 lg:row-start-1' : 'lg:col-start-2 lg:row-start-1'}`}>
