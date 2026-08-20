@@ -63,7 +63,7 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                                         className="absolute inset-0 w-full h-full"
                                         style={{ maskImage: 'linear-gradient(to right, black 30%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, black 30%, transparent 100%)' }}
                                     >
-                                        <Image src="/banner-miku-current.png" alt="Banner Current" fill sizes="(max-width: 1024px) 100vw, 1024px" className="object-cover object-[center_10%] opacity-60 grayscale-25" />
+                                        <Image src="/banner-miku-current.webp" alt="Banner Current" fill sizes="(max-width: 1024px) 100vw, 1024px" className="object-cover object-[center_10%] opacity-60 grayscale-25" />
                                     </div>
                                 </div>
 
@@ -105,7 +105,7 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                                         className="absolute inset-0 w-full h-full"
                                         style={{ maskImage: 'linear-gradient(to right, black 30%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, black 30%, transparent 100%)' }}
                                     >
-                                        <Image src="/banner-miku-oldd.png" alt="Banner Old" fill sizes="(max-width: 1024px) 100vw, 1024px" className="object-cover object-[center_5%] opacity-50 grayscale-40" />
+                                        <Image src="/banner-miku-oldd.webp" alt="Banner Old" fill sizes="(max-width: 1024px) 100vw, 1024px" className="object-cover object-[center_5%] opacity-50 grayscale-40" />
                                     </div>
                                 </div>
 
@@ -252,6 +252,7 @@ export default function SkinsSection({ lang, selectedSkin, onSelectSkin, onClose
                                                         alt={creator.name}
                                                         fill
                                                         unoptimized
+                                                        sizes="40px"
                                                         className="object-cover"
                                                     />
                                                 </div>

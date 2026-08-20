@@ -37,6 +37,19 @@ export default function ProfileContent() {
         bannerUrl: 'https://assets.ppy.sh/user-cover-presets/6/a7d51a05cb3c08a43531dfa8dc99c2fc7fe0d8cfce2756c340f11b3683b5d3bf.jpeg',
         badges: [] as OsuBadge[]
     });
+    const [visitedTabs, setVisitedTabs] = useState<Set<TabId>>(() => new Set([activeTab]));
+
+    // Derive visited tabs during render (pure, no effect): mark the active tab as
+    // visited so its section stays mounted once seen. setState during render with
+    // a conditional bail-out is the React-sanctioned way to derive state.
+    if (!visitedTabs.has(activeTab)) {
+        setVisitedTabs(prev => {
+            if (prev.has(activeTab)) return prev;
+            const next = new Set(prev);
+            next.add(activeTab);
+            return next;
+        });
+    }
     const [topPlays, setTopPlays] = useState<TopPlay[]>([]);
     const [showTopPlays, setShowTopPlays] = useState(false);
     const [copiedId, setCopiedId] = useState<string | null>(null);
@@ -112,11 +125,6 @@ export default function ProfileContent() {
     return (
         <main className="relative min-h-screen flex flex-col text-white overflow-x-hidden">
             <BubblesBackground />
-            <link rel="preload" as="image" href="/banner-setup.jpg" />
-            <link rel="preload" as="image" href="/banner-tips.jpg" />
-            <link rel="preload" as="image" href="/banner-miku-current.png" />
-            <link rel="preload" as="image" href="/banner-miku-oldd.png" />
-            <link rel="preload" as="image" href="/diary.jpg" />
             <Header
                 activeTab={activeTab}
                 lang={lang}
@@ -125,42 +133,54 @@ export default function ProfileContent() {
 
             <div className="grow w-full max-w-300 mx-auto mt-20 mb-0 lg:mt-28 lg:mb-12 bg-[#0f172a]/75 backdrop-blur-sm lg:bg-[#0f172a]/70 lg:backdrop-blur-md lg:border lg:border-slate-700/50 lg:shadow-[0_0_50px_rgba(5,11,20,0.8)] relative z-10 flex flex-col pt-4 pb-20 lg:px-12 min-h-[60vh]">
 
-                {activeTab === 'home' && (
-                    <HomeSection
-                        lang={lang}
-                        osuStats={osuStats}
-                        topPlays={topPlays}
-                        showTopPlays={showTopPlays}
-                        setShowTopPlays={setShowTopPlays}
-                        handleCopy={handleCopy}
-                        copiedId={copiedId}
-                    />
+                {visitedTabs.has('home') && (
+                    <div hidden={activeTab !== 'home'} className={activeTab === 'home' ? '' : 'hidden'}>
+                        <HomeSection
+                            lang={lang}
+                            osuStats={osuStats}
+                            topPlays={topPlays}
+                            showTopPlays={showTopPlays}
+                            setShowTopPlays={setShowTopPlays}
+                            handleCopy={handleCopy}
+                            copiedId={copiedId}
+                        />
+                    </div>
                 )}
 
-                {activeTab === 'setup' && (
-                    <SetupSection
-                        lang={lang}
-                        onOpenLightbox={(images) => {
-                            setSetupLightboxImages(images);
-                            setSetupLightboxIndex(0);
-                        }}
-                    />
+                {visitedTabs.has('setup') && (
+                    <div hidden={activeTab !== 'setup'}>
+                        <SetupSection
+                            lang={lang}
+                            onOpenLightbox={(images) => {
+                                setSetupLightboxImages(images);
+                                setSetupLightboxIndex(0);
+                            }}
+                        />
+                    </div>
                 )}
 
-                {activeTab === 'skins' && (
-                    <SkinsSection
-                        lang={lang}
-                        selectedSkin={selectedSkin}
-                        onSelectSkin={handleSelectSkin}
-                        onCloseSkin={handleCloseSkin}
-                        onOpenLightbox={(idx) => setLightboxIndex(idx)}
-                    />
+                {visitedTabs.has('skins') && (
+                    <div hidden={activeTab !== 'skins'}>
+                        <SkinsSection
+                            lang={lang}
+                            selectedSkin={selectedSkin}
+                            onSelectSkin={handleSelectSkin}
+                            onCloseSkin={handleCloseSkin}
+                            onOpenLightbox={(idx) => setLightboxIndex(idx)}
+                        />
+                    </div>
                 )}
 
-                {activeTab === 'diary' && <DiarySection lang={lang} />}
+                {visitedTabs.has('diary') && (
+                    <div hidden={activeTab !== 'diary'}>
+                        <DiarySection lang={lang} />
+                    </div>
+                )}
 
-                {activeTab === 'tips' && (
-                    <TipsSection lang={lang} openTips={openTips} toggleTip={toggleTip} />
+                {visitedTabs.has('tips') && (
+                    <div hidden={activeTab !== 'tips'}>
+                        <TipsSection lang={lang} openTips={openTips} toggleTip={toggleTip} />
+                    </div>
                 )}
 
             </div>

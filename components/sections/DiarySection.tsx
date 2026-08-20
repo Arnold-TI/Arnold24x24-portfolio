@@ -37,7 +37,7 @@ export default function DiarySection({ lang }: { lang: Lang }) {
                             style={{ maskImage: 'linear-gradient(to bottom, black 50%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 50%, transparent 100%)' }}
                         >
                             <Image
-                                src="/diary.jpg"
+                                src="/diary.webp"
                                 alt="Banner Diary"
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 1024px"

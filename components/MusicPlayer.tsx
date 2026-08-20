@@ -104,7 +104,7 @@ export default function MusicPlayer() {
                         }}
                     >
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src="/deep-sea-girl.jpg" alt="Vinyl" className="w-full h-full object-cover opacity-80" />
+                        <img src="/deep-sea-girl.webp" alt="Vinyl" className="w-full h-full object-cover opacity-80" />
                         <div className="absolute w-2.5 h-2.5 bg-[#0a1324] rounded-full border border-slate-700 z-10"></div>
                     </div>
 

@@ -84,7 +84,7 @@ export default function Header({ activeTab, lang, setLang }: HeaderProps) {
                             }`}
                         >
                             <div className="relative w-3 h-2 md:w-3.5 md:h-2.5 rounded-xs overflow-hidden shrink-0 opacity-90">
-                                <Image src="https://flagcdn.com/pe.svg" alt="Peru Flag" fill unoptimized className="object-cover" />
+                                <Image src="https://flagcdn.com/pe.svg" alt="Peru Flag" fill unoptimized sizes="(max-width: 768px) 12px, 14px" className="object-cover" />
                             </div>
                             ES
                         </button>
@@ -98,7 +98,7 @@ export default function Header({ activeTab, lang, setLang }: HeaderProps) {
                             }`}
                         >
                             <div className="relative w-3 h-2 md:w-3.5 md:h-2.5 rounded-xs overflow-hidden shrink-0 opacity-90">
-                                <Image src="https://flagcdn.com/us.svg" alt="USA Flag" fill unoptimized className="object-cover" />
+                                <Image src="https://flagcdn.com/us.svg" alt="USA Flag" fill unoptimized sizes="(max-width: 768px) 12px, 14px" className="object-cover" />
                             </div>
                             EN
                         </button>

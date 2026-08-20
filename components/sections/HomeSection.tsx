@@ -38,11 +38,11 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                 >
                     <div className="relative w-full aspect-[4.8/1] lg:aspect-5/1 overflow-hidden border-b border-slate-700/80 shadow-[0_15px_40px_rgba(5,11,20,0.4)]">
                         <Image
-                            src="/Banner-Arnold24x24.png"
+                            src="/Banner-Arnold24x24.webp"
                             alt="Welcome to Arnold24x24"
                             fill
                             priority
-                            sizes="100vw"
+                            sizes="(max-width: 768px) 100vw, 1280px"
                             className="object-cover block"
                         />
                     </div>
@@ -85,7 +85,6 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                             fill
                             sizes="(max-width: 768px) 80px, 144px"
                             unoptimized
-                            loading="eager"
                             className="object-cover"
                         />
                     </div>
@@ -119,10 +118,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                         src={osuStats.bannerUrl}
                         alt="Banner"
                         fill
-                        unoptimized
-                        priority
-                        loading="eager"
-                        sizes="100vw"
+                        sizes="(max-width: 768px) 100vw, 1280px"
                         className="object-cover opacity-100 transition-opacity duration-500 grayscale-10"
                     />
                     <div className="absolute inset-0 bg-linear-to-r from-[#050b14] via-[#050b14]/80 to-[#102a54]/40 transition-colors duration-500"></div>
@@ -134,7 +130,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                                 src="/Gear-Hachune_Miku_Leek_Render.png"
                                 alt="Leek"
                                 fill
-                                loading="eager"
+                                unoptimized
                                 sizes="64px"
                                 className="object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] opacity-80 hover:opacity-100 hover:scale-110 hover:-rotate-12 transition-all cursor-default"
                             />
@@ -148,7 +144,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                                 src="/Gear-Hachune_Miku_Leek_Render.png"
                                 alt="Leek"
                                 fill
-                                loading="eager"
+                                unoptimized
                                 sizes="64px"
                                 className="object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] opacity-80 hover:opacity-100 hover:scale-110 hover:-rotate-12 transition-all cursor-default"
                             />
@@ -163,12 +159,12 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                             <div className="absolute -inset-1 bg-linear-to-r from-slate-600 to-slate-400 rounded-2xl"></div>
 
                             <div className="relative w-full aspect-square hover:border-slate-400 backdrop-blur-sm rounded-2xl border-2 border-slate-600 group-hover/avatar:border-slate-400 overflow-hidden bg-[#050b14] transition-colors">
-                                <Image src={osuStats.avatarUrl} alt="Avatar" fill loading="eager" unoptimized className="object-cover" />
+                                <Image src={osuStats.avatarUrl} alt="Avatar" fill unoptimized sizes="(max-width: 768px) 80px, 176px" className="object-cover" />
                             </div>
                             <div className="absolute -bottom-2 -right-2 md:-bottom-3 md:-right-3 bg-[#050b14] border border-slate-700 rounded-md md:rounded-lg px-1 py-0.5 md:px-2 md:py-1 flex items-center gap-1 md:gap-2 shadow-lg">
                                 <span className="text-[9px] md:text-xs font-bold text-slate-300">{osuStats.country}</span>
                                 <div className="relative w-3 h-2 md:w-5 md:h-3.5">
-                                    <Image src={`https://flagcdn.com/${osuStats.country.toLowerCase()}.svg`} alt="Flag" fill className="rounded-sm object-cover" />
+                                    <Image src={`https://flagcdn.com/${osuStats.country.toLowerCase()}.svg`} alt="Flag" fill unoptimized sizes="(max-width: 768px) 12px, 20px" className="rounded-sm object-cover" />
                                 </div>
                             </div>
                         </a>
@@ -344,7 +340,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                     </div>
                 </div>
 
-                <div className={`absolute inset-0 z-20 pt-10 md:pt-14 pb-4 px-5 md:pl-28 md:pr-28 flex flex-col transition-opacity duration-500 bg-[#050b14]/98 ${showTopPlays ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                <div className={`absolute inset-0 z-20 pt-10 md:pt-14 pb-4 px-5 md:pl-28 md:pr-28 flex flex-col transition-opacity duration-500 bg-[#050b14]/98 ${showTopPlays ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none invisible'}`}>
                     <button
                         onClick={(e) => { e.stopPropagation(); setShowTopPlays(false); }}
                         className="absolute top-2 left-5 md:left-28 flex items-center justify-center w-7 h-7 md:w-8 md:h-8 bg-[#050b14]/60 text-slate-400 border border-slate-700/60 rounded-lg hover:bg-white/5 hover:border-slate-600/60 hover:text-slate-200 transition-colors duration-300 cursor-pointer z-30"
@@ -379,7 +375,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                                         className="relative flex items-center justify-between border border-slate-700/50 rounded-lg p-2 overflow-hidden group/play hover:border-slate-500/70 hover:bg-[#131f37]/60 transition-all bg-[#0f172a]/60 cursor-pointer"
                                     >
                                         <div className="absolute inset-0 z-0">
-                                            <Image src={play.coverUrl} alt={play.song} fill unoptimized sizes="100vw" className="object-cover opacity-90 group-hover/play:opacity-100 transition-opacity duration-300 transform-gpu backface-hidden will-change-opacity" />
+                                            <Image src={play.coverUrl} alt={play.song} fill unoptimized sizes="(max-width: 768px) 90vw, 480px" className="object-cover opacity-90 group-hover/play:opacity-100 transition-opacity duration-300 transform-gpu backface-hidden will-change-opacity" />
                                             <div className="absolute inset-0 bg-linear-to-r from-[#050b14]/90 via-[#050b14]/40 to-transparent"></div>
                                         </div>
 
@@ -428,7 +424,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                                         className="relative flex items-center justify-between border border-slate-700/50 rounded-lg p-2 overflow-hidden group/play hover:border-slate-500/70 hover:bg-[#131f37]/60 transition-all bg-[#0f172a]/60 cursor-pointer"
                                     >
                                         <div className="absolute inset-0 z-0">
-                                            <Image src={`https://assets.ppy.sh/beatmaps/${play.beatmapsetId}/covers/cover.jpg`} alt={play.title} fill unoptimized sizes="100vw" className="object-cover opacity-90 group-hover/play:opacity-100 transition-opacity duration-300 transform-gpu backface-hidden will-change-opacity" />
+                                            <Image src={`https://assets.ppy.sh/beatmaps/${play.beatmapsetId}/covers/cover.jpg`} alt={play.title} fill unoptimized sizes="(max-width: 768px) 90vw, 480px" className="object-cover opacity-90 group-hover/play:opacity-100 transition-opacity duration-300 transform-gpu backface-hidden will-change-opacity" />
                                             <div className="absolute inset-0 bg-linear-to-r from-[#050b14]/90 via-[#050b14]/40 to-transparent"></div>
                                         </div>
 
@@ -477,6 +473,7 @@ export default function HomeSection({ lang, osuStats, topPlays, showTopPlays, se
                             src="/silueta.png"
                             alt=""
                             fill
+                            unoptimized
                             sizes="(max-width: 768px) 240px, 352px"
                             className="object-contain drop-shadow-[0_0_45px_rgba(56,189,248,0.35)]"
                         />

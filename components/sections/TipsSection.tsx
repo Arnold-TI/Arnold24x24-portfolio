@@ -32,7 +32,7 @@ export default function TipsSection({ lang, openTips, toggleTip }: TipsSectionPr
                             style={{ maskImage: 'linear-gradient(to bottom, black 50%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 50%, transparent 100%)' }}
                         >
                             <Image
-                                src="/banner-tips.jpg"
+                                src="/banner-tips.webp"
                                 alt="Banner Tips"
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 1024px"

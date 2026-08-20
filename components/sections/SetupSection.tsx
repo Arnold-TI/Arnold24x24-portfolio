@@ -38,7 +38,7 @@ export default function SetupSection({ lang, onOpenLightbox }: SetupSectionProps
                     >
                         <div className="absolute inset-0 z-0">
                             <Image
-                                src="/banner-setup.jpg"
+                                src="/banner-setup.webp"
                                 alt="Banner Setup"
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 1024px"

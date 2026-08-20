@@ -1,9 +1,72 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { translations } from '@/lib/translations';
 import type { Lang, TwitchData } from '@/lib/types';
+
+/**
+ * Background video for the VOD card. Auto-plays once mounted (or as soon as the
+ * element scrolls into view) and pauses when it leaves the viewport so it never
+ * drains the page while off-screen. Only the metadata + first chunk download
+ * until it becomes visible.
+ */
+function VodBackground() {
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const [ready, setReady] = useState(false);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        let io: IntersectionObserver | null = null;
+        const onVisible = () => {
+            video.play().catch(() => {});
+        };
+        const onHidden = () => {
+            video.pause();
+        };
+
+        // Wait for enough data to be buffered before starting playback
+        const handleCanPlay = () => {
+            setReady(true);
+            video.play().catch(() => {});
+        };
+        video.addEventListener('canplay', handleCanPlay);
+
+        if ('IntersectionObserver' in window) {
+            io = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) onVisible();
+                        else onHidden();
+                    });
+                },
+                { rootMargin: '200px 0px' }
+            );
+            io.observe(video);
+        } else {
+            onVisible();
+        }
+
+        return () => {
+            video.removeEventListener('canplay', handleCanPlay);
+            io?.disconnect();
+        };
+    }, []);
+
+    return (
+        <video
+            ref={videoRef}
+            src="/vod-bg.mp4"
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className={`absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity duration-500 ${ready ? '' : 'opacity-0'}`}
+        />
+    );
+}
 
 export default function TwitchStatsCard({ lang }: { lang: Lang }) {
     const [twitchData, setTwitchData] = useState<TwitchData | null>(null);
@@ -36,6 +99,8 @@ export default function TwitchStatsCard({ lang }: { lang: Lang }) {
                         src={stream?.thumbnail || '/logo.png'}
                         alt="Stream Thumbnail"
                         fill
+                        unoptimized
+                        sizes="(max-width: 768px) 100vw, 480px"
                         className="object-cover opacity-20 blur-sm group-hover/twitch:blur-none transition-all duration-500"
                     />
                     <div className="absolute inset-0 bg-[#0f172a]/80 transition-colors duration-500"></div>
@@ -49,7 +114,8 @@ export default function TwitchStatsCard({ lang }: { lang: Lang }) {
                                 src={user.avatarUrl || '/logo.png'}
                                 alt="Avatar Twitch"
                                 fill
-                                sizes="128px"
+                                unoptimized
+                                sizes="(max-width: 768px) 96px, 128px"
                                 className="object-cover"
                             />
                         </div>
@@ -123,15 +189,7 @@ export default function TwitchStatsCard({ lang }: { lang: Lang }) {
                 rel="noopener noreferrer"
                 className="relative z-10 w-full aspect-video max-w-[20rem] mx-auto mt-auto rounded-lg overflow-hidden border border-slate-700/50 group cursor-pointer flex items-center justify-center bg-[#050b14]/50 hover:border-[#a970ff]/50 transition-colors"
             >
-                <video
-                    src="/vod-bg.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="metadata"
-                    className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity duration-500"
-                />
+                <VodBackground />
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-colors duration-500"></div>
 
                 <div className="relative z-10 flex flex-col items-center transition-transform duration-300 group-hover:-translate-y-1">
