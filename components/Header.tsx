@@ -46,7 +46,7 @@ export default function Header({ activeTab, lang, setLang }: HeaderProps) {
                     </button>
 
                     <div className="flex items-center gap-2 group">
-                        <div className="relative w-9 h-9 md:w-10 md:h-10 overflow-hidden rounded-lg border border-slate-700 flex items-center justify-center bg-[#0f172a]">
+                        <div className="relative w-9 h-9 md:w-10 md:h-10 overflow-hidden rounded-lg border border-slate-700 group-hover:border-cyan-400 group-hover:shadow-[0_0_12px_rgba(165,243,252,0.35)] transition-all duration-300 flex items-center justify-center bg-[#0f172a]">
                             <Image
                                 src="/logo.png"
                                 alt="Logo"

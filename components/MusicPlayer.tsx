@@ -29,8 +29,9 @@ export default function MusicPlayer() {
         }
     }, [volume]);
 
-    const handlePlay = () => {
+    useEffect(() => {
         if (audioRef.current) {
+            audioRef.current.volume = volume;
             const playPromise = audioRef.current.play();
             if (playPromise !== undefined) {
                 playPromise
@@ -44,7 +45,7 @@ export default function MusicPlayer() {
                     });
             }
         }
-    };
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     const togglePlay = () => {
         if (audioRef.current) {
@@ -52,7 +53,12 @@ export default function MusicPlayer() {
                 audioRef.current.pause();
                 setIsPlaying(false);
             } else {
-                handlePlay();
+                const playPromise = audioRef.current.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {});
+                }
+                setIsPlaying(true);
+                setIsStopped(false);
             }
         }
     };
@@ -188,7 +194,6 @@ export default function MusicPlayer() {
             <audio
                 ref={audioRef}
                 src={track.src}
-                preload="none"
                 onTimeUpdate={(e) => {
                     setCurrentTime(e.currentTarget.currentTime);
                     if (!duration || isNaN(duration) || duration === 0) {
