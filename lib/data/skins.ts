@@ -6,63 +6,63 @@ export const currentSkins: OsuSkin[] = [
         title: "Hatsune Miku x Aristia skin (Arnold's ver.)",
         desc: "Mi main skin. La uso para casi todo (incluído EZHD) - Le he hecho modificaciones leves con el pasar de los años. Perfecta para torneos y todo en general",
         descEn: "My main skin. I use it for almost everything (including EZHD) - I've made minor modifications to it over the years. Perfect for tournaments and general use.",
-        img: "/skin1.webp", video: "/skin1.mp4", link: "https://arnold24x24.s-ul.eu/R8kMd3SM", banner: "/banner-skin1.webp", screenshots: ["/ss1-1.webp", "/ss1-2.webp", "/ss1-3.webp", "/ss1-4.webp", "/ss1-5.webp", "/ss1-6.webp", "/ss1-7.webp", "/ss1-8.webp", "/ss1-9.webp", "/ss1-10.webp", "/ss1-11.webp", "/ss1-12.webp" ], creators: [{ name: "CloudKeyz: original concept", osuId: 15194624}, { name: "Arnold24x24: edit", osuId: 2291265}]
+        img: "/skin1.webp", video: "/skin1.mp4", link: "https://arnold24x24.s-ul.eu/R8kMd3SM", banner: "/banner-skin1.webp", screenshots: ["/ss1-1.png", "/ss1-2.png", "/ss1-3.png", "/ss1-4.png", "/ss1-5.png", "/ss1-6.png", "/ss1-7.png", "/ss1-8.png", "/ss1-9.png", "/ss1-10.png", "/ss1-11.png", "/ss1-12.png" ], creators: [{ name: "CloudKeyz: original concept", osuId: 15194624}, { name: "Arnold24x24: edit", osuId: 2291265}]
     },
     {
         id: 2,
         title: "Hatsune Miku 3.0 | Miku x Cinnamoroll (Arnold's ver.)",
         desc: "Última versión de mis skins de Hatsune Miku. Es la skin más hermosa que me han hecho con temática de Miku x Cinnamoroll. Usado para (HD)DT y HD only a veces",
         descEn: "Latest version of my Hatsune Miku skins. It is the most beautiful Miku x Cinnamoroll themed skin ever made for me. Used for (HD)DT and HD only sometimes.",
-        img: "/skin2.webp", video: "/skin2.mp4", link: "https://drive.google.com/drive/folders/1WLE_8i0CHMv-QEciPX7tqw0j74rMl7gx?usp=sharing", banner: "/banner-skin2.webp", screenshots: ["/ss2-1.webp", "/ss2-2.webp", "/ss2-3.webp", "/ss2-4.webp", "/ss2-5.webp", "/ss2-6.webp", "/ss2-7.webp", "/ss2-8.webp", "/ss2-9.webp", "/ss2-10.webp", "/ss2-11.webp", "/ss2-12.webp" ], creators: [{ name: "CloudKeyz", osuId: 15194624, postUrl: "https://www.reddit.com/r/OsuSkins/comments/x47dp4/hatsune_miku_30_miku_x_cinnamoroll_169_std_only/" }]
+        img: "/skin2.webp", video: "/skin2.mp4", link: "https://drive.google.com/drive/folders/1WLE_8i0CHMv-QEciPX7tqw0j74rMl7gx?usp=sharing", banner: "/banner-skin2.webp", screenshots: ["/ss2-1.png", "/ss2-2.png", "/ss2-3.png", "/ss2-4.png", "/ss2-5.png", "/ss2-6.png", "/ss2-7.png", "/ss2-8.png", "/ss2-9.png", "/ss2-10.png", "/ss2-11.png", "/ss2-12.png" ], creators: [{ name: "CloudKeyz", osuId: 15194624, postUrl: "https://www.reddit.com/r/OsuSkins/comments/x47dp4/hatsune_miku_30_miku_x_cinnamoroll_169_std_only/" }]
     },
     {
         id: 3,
         title: "Hatsune Miku 2.0 (Arnold's ver.)",
         desc: "La versión 2.0 de mis skins de Hatsune Miku. Esta es una de las skins más pesadas que tengo por la carga de objetos que hay en pantalla. Puede que no sea para todas las PCs. Al igual que la 3.0, solo la uso para (HD)DT o HD only",
         descEn: "Version 2.0 of my Hatsune Miku skins. This is one of the heaviest skins I have due to the item load on screen. Might not be for all PCs. Just like version 3.0, I only use it for (HD)DT or HD only.",
-        img: "/skin3.webp", video: "/skin3.mp4", link: "https://drive.google.com/drive/folders/1i_VPODNvD9f-IjMKM_-TkuqLBzAYLH86", banner: "/banner-skin3.webp", screenshots: ["/ss3-1.webp", "/ss3-2.webp", "/ss3-3.webp", "/ss3-4.webp", "/ss3-5.webp", "/ss3-6.webp", "/ss3-7.webp", "/ss3-8.webp", "/ss3-9.webp", "/ss3-10.webp", "/ss3-11.webp", "/ss3-12.webp"], creators: [{ name: "CloudKeyz", osuId: 15194624, postUrl: "https://www.reddit.com/r/OsuSkins/comments/pock3r/vocaloidhatsune_miku_20_hdsd_169_std_only/" }]
+        img: "/skin3.webp", video: "/skin3.mp4", link: "https://drive.google.com/drive/folders/1i_VPODNvD9f-IjMKM_-TkuqLBzAYLH86", banner: "/banner-skin3.webp", screenshots: ["/ss3-1.png", "/ss3-2.png", "/ss3-3.png", "/ss3-4.png", "/ss3-5.png", "/ss3-6.png", "/ss3-7.png", "/ss3-8.png", "/ss3-9.png", "/ss3-10.png", "/ss3-11.png", "/ss3-12.png"], creators: [{ name: "CloudKeyz", osuId: 15194624, postUrl: "https://www.reddit.com/r/OsuSkins/comments/pock3r/vocaloidhatsune_miku_20_hdsd_169_std_only/" }]
     },
     {
         id: 4,
         title: "BOGEZ",
         desc: "Skin exclusiva para EZ. Bajas levemente la gama y notarás la magia",
         descEn: "Exclusive skin for EZ. Lower the gamma slightly and you will notice the magic.",
-        img: "/skin4.webp", video: "/skin4.mp4", link: "https://arnold24x24.s-ul.eu/Efqpirji", banner: "/banner-skin4.webp", screenshots: ["/ss4-1.webp", "/ss4-2.webp", "/ss4-3.webp", "/ss4-4.webp", "/ss4-5.webp", "/ss4-6.webp", "/ss4-7.webp"], creators: [{ name: "bog", osuId: 4265261}]
+        img: "/skin4.webp", video: "/skin4.mp4", link: "https://arnold24x24.s-ul.eu/Efqpirji", banner: "/banner-skin4.webp", screenshots: ["/ss4-1.png", "/ss4-2.png", "/ss4-3.png", "/ss4-4.png", "/ss4-5.png", "/ss4-6.png", "/ss4-7.png"], creators: [{ name: "bog", osuId: 4265261}]
     },
     {
         id: 5,
         title: "sugoi v5 x Cinnamoroll x Miku",
         desc: "Otra skin exclusiva para EZ, pero tematizada de Miku con elementos tomados de la Hatsune Miku 3.0",
         descEn: "Another EZ-exclusive skin, but themed around Miku with elements taken from Hatsune Miku 3.0.",
-        img: "/skin5.webp", video: "/skin5.mp4", link: "https://arnold24x24.s-ul.eu/hkJf0DoB", banner: "/banner-skin5.webp", screenshots: ["/ss5-1.webp", "/ss5-2.webp", "/ss5-3.webp", "/ss5-4.webp", "/ss5-5.webp", "/ss5-6.webp"], creators: [{ name: "Arnold24x24", osuId: 2291265}, { name: "mofuries", osuId: 1749607}]
+        img: "/skin5.webp", video: "/skin5.mp4", link: "https://arnold24x24.s-ul.eu/hkJf0DoB", banner: "/banner-skin5.webp", screenshots: ["/ss5-1.png", "/ss5-2.png", "/ss5-3.png", "/ss5-4.png", "/ss5-5.png", "/ss5-6.png"], creators: [{ name: "Arnold24x24", osuId: 2291265}, { name: "mofuries", osuId: 1749607}]
     },
     {
         id: 6,
         title: "Rafis TrippleStacked (Arnold's ver)",
         desc: "Lo ando usando más a menudo para AR alto por encima de 10.4 (y AR11), ya que es la versión tripplestacked - Yo solo le añadí elementos de la Hatsune Miku 3.0 skin",
         descEn: "I use this more often for high AR above 10.4 (and AR11), as it's the tripplestacked version - I only added elements from the Hatsune Miku 3.0 skin.",
-        img: "/skin6.webp", video: "/skin6.mp4", link: "https://arnold24x24.s-ul.eu/KuadHUvt", banner: "/banner-skin6.webp", screenshots: ["/ss6-1.webp", "/ss6-2.webp", "/ss6-3.webp", "/ss6-4.webp", "/ss6-5.webp", "/ss6-6.webp", "/ss6-7.webp", "/ss6-8.webp"], creators: [{ name: "Arnold24x24", osuId: 2291265}, { name: "Rafis", osuId: 2558286}]
+        img: "/skin6.webp", video: "/skin6.mp4", link: "https://arnold24x24.s-ul.eu/KuadHUvt", banner: "/banner-skin6.webp", screenshots: ["/ss6-1.png", "/ss6-2.png", "/ss6-3.png", "/ss6-4.png", "/ss6-5.png", "/ss6-6.png", "/ss6-7.png", "/ss6-8.png"], creators: [{ name: "Arnold24x24", osuId: 2291265}, { name: "Rafis", osuId: 2558286}]
     },
     {
         id: 7,
         title: "ktrihc 404",
         desc: "Skin de ktrihc que uso cuando juego mapas tech (nm4) sightread - Lo oscuro de la skin y que los 100's sean apenas perceptibles lo hace muy limpio para jugar mapas con sliders y notas entreveradas",
         descEn: "Ktrihc's skin that I use when sightreading tech maps (nm4) - The darkness of the skin and barely noticeable 100s make it very clean for playing maps with complex sliders and overlapping notes.",
-        img: "/skin7.webp", video: "/skin7.mp4", link: "https://ktrihc.s-ul.eu/kei/PZV4HHbd", banner: "/banner-skin7.webp", screenshots: ["/ss7-1.webp", "/ss7-2.webp", "/ss7-3.webp", "/ss7-4.webp", "/ss7-5.webp", "/ss7-6.webp", "/ss7-7.webp", "/ss7-8.webp", "/ss7-9.webp", "/ss7-10.webp", "/ss7-11.webp" ], creators: [{ name: "-ktrihc", osuId: 11685498}]
+        img: "/skin7.webp", video: "/skin7.mp4", link: "https://ktrihc.s-ul.eu/kei/PZV4HHbd", banner: "/banner-skin7.webp", screenshots: ["/ss7-1.png", "/ss7-2.png", "/ss7-3.png", "/ss7-4.png", "/ss7-5.png", "/ss7-6.png", "/ss7-7.png", "/ss7-8.png", "/ss7-9.png", "/ss7-10.png", "/ss7-11.png" ], creators: [{ name: "-ktrihc", osuId: 11685498}]
     },
     {
         id: 8,
         title: "Hatsune Miku 1.0 (Arnold's ver.)",
         desc: "La primera versión de mis skins de Hatsune Miku. Es un concepto inspirado en mi skin del 2020 (Arnold24x24 crrana spid skin) modificada y mejorada. Era mi skin principal en el 2021 y lo usaba sobretodo para HD y (HD)DT - Mi main skin actual (Hatsune Miku x Aristia) es la modificación de esta",
         descEn: "The first version of my Hatsune Miku skins. It is a concept inspired by my 2020 skin (Arnold24x24 crrana spid skin) modified and improved. It was my main skin in 2021, used mostly for HD and (HD)DT - My current main skin (Hatsune Miku x Aristia) is a modification of this one.",
-        img: "/skin8.webp", video: "/skin8.mp4", link: "https://arnold24x24.s-ul.eu/H8LmbEYl", banner: "/banner-skin8.webp", screenshots: ["/ss8-1.webp", "/ss8-2.webp", "/ss8-3.webp", "/ss8-4.webp", "/ss8-5.webp", "/ss8-6.webp"], creators: [{ name: "CloudKeyz", osuId: 15194624, postUrl: "https://www.reddit.com/r/OsuSkins/comments/n5ubil/vocaloid_hatsune_miku_%E5%88%9D%E9%9F%B3%E3%83%9F%E3%82%AF_4_versions_hd_std_only/" }]
+        img: "/skin8.webp", video: "/skin8.mp4", link: "https://arnold24x24.s-ul.eu/H8LmbEYl", banner: "/banner-skin8.webp", screenshots: ["/ss8-1.png", "/ss8-2.png", "/ss8-3.png", "/ss8-4.png", "/ss8-5.png", "/ss8-6.png"], creators: [{ name: "CloudKeyz", osuId: 15194624, postUrl: "https://www.reddit.com/r/OsuSkins/comments/n5ubil/vocaloid_hatsune_miku_%E5%88%9D%E9%9F%B3%E3%83%9F%E3%82%AF_4_versions_hd_std_only/" }]
     },
     {
         id: 9,
         title: "Menhera-chan (taiko/ctb/mania)",
         desc: "Si algún día me ven jugando otro modo (nunca), probablemente estaré usando esta skin",
         descEn: "If you ever see me playing another mode (never), I'll probably be using this skin.",
-        img: "/skin9.webp", video: "/skin9.mp4", link: "https://drive.google.com/file/d/1FU7LVbyKTjiU8tqIEhen1e2eqEUWTSt3/view?usp=sharing", banner: "/banner-skin9.webp", screenshots: ["/ss9-1.webp", "/ss9-2.webp", "/ss9-3.webp", "/ss9-4.webp", "/ss9-5.webp", "/ss9-6.webp", "/ss9-7.webp", "/ss9-8.webp", "/ss9-9.webp", "/ss9-10.webp", "/ss9-11.webp", "/ss9-12.webp", "/ss9-13.webp", "/ss9-14.webp"], creators: [{ name: "JakeBlade2017", osuId: 14085757, postUrl: "https://osu.ppy.sh/community/forums/topics/1249007?n=1"}] }
+        img: "/skin9.webp", video: "/skin9.mp4", link: "https://drive.google.com/file/d/1FU7LVbyKTjiU8tqIEhen1e2eqEUWTSt3/view?usp=sharing", banner: "/banner-skin9.webp", screenshots: ["/ss9-1.png", "/ss9-2.png", "/ss9-3.png", "/ss9-4.png", "/ss9-5.png", "/ss9-6.png", "/ss9-7.png", "/ss9-8.png", "/ss9-9.png", "/ss9-10.png", "/ss9-11.png", "/ss9-12.png", "/ss9-13.png", "/ss9-14.png"], creators: [{ name: "JakeBlade2017", osuId: 14085757, postUrl: "https://osu.ppy.sh/community/forums/topics/1249007?n=1"}] }
 ];
 
 export const oldSkins: OsuSkin[] = [

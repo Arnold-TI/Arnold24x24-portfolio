@@ -7,7 +7,7 @@ const es: SetupItem[] = [
         desc: "Mouse actual. Lo uso a 900DPI y 1000Hz de polling rate. La ergonomía de este mouse es perfecta para cualquier tipo de agarre y pesa muy poco (49.5g), asi que sirve para movimientos rápidos. Sus únicas desventajas que le veo son que es por cable y su precio elevado. El sensor y sus materiales de construcción son muy top así que es una excelente compra.",
         link: "https://amzn.to/3Sd4aZp",
         aliexpress: "https://s.click.aliexpress.com/e/_c3bk6Yix",
-        screenshots: ["/mouse-config1.webp", "/mouse-config2.webp", "/mouse-config3.webp", "/mouse-config4.webp"],
+        screenshots: ["/mouse-config1.png", "/mouse-config2.png", "/mouse-config3.png", "/mouse-config4.png"],
         objectPos: "30% 40%"
     },
     {
@@ -15,7 +15,7 @@ const es: SetupItem[] = [
         img: "/teclado.webp",
         desc: "Teclado híbrido MagMech (TMR) de aluminio con latencia de 0.125ms (0.611ms reales), 8000hz de polling rate y con 3 tipos de conexiones. Es el teclado más todoterreno que existe actualmente. Viene por defecto keycaps de PBT y switches magnéticos Womier Void.",
         link: "https://amzn.to/4bUkGo1",
-        screenshots: ["/teclado-config1.webp", "/teclado-config2.webp", "/teclado-config3.webp"]
+        screenshots: ["/teclado-config1.png", "/teclado-config2.png", "/teclado-config3.png"]
     },
     {
         name: "Artisan FX Zero Soft - L",
@@ -58,7 +58,7 @@ const es: SetupItem[] = [
         desc: "Keypad con switches magnéticos rapid trigger que antiguamente usaba antes de comprar mi teclado Womier (del 2023 al 2025). Los switches con los que solía jugar eran los default (outemu red) y luego los outemu rosados. No fue sino hasta tiempo después que me las cambié por los Raptor HE. La mejor opción económica si todavía no tienes un teclado o keypad con Rapid Trigger para osu.",
         link: "https://amzn.to/4hDPcWY",
         aliexpress: "https://s.click.aliexpress.com/e/_c4qNAWex",
-        screenshots: ["/keypad-config.webp"],
+        screenshots: ["/keypad-config.png"],
         objectPos: "30% 30%"
     }
 ];
@@ -70,7 +70,7 @@ const en: SetupItem[] = [
         desc: "Current mouse. I use it at 900DPI and 1000Hz polling rate. The ergonomics of this mouse are perfect for any grip type and it is very light (49.5g), so it works great for fast movements. The only disadvantages I see are that it's wired and has a high price. The sensor and building materials are top notch so it's an excellent purchase.",
         link: "https://amzn.to/3Sd4aZp",
         aliexpress: "https://s.click.aliexpress.com/e/_c3bk6Yix",
-        screenshots: ["/mouse-config1.webp", "/mouse-config2.webp", "/mouse-config3.webp", "/mouse-config4.webp"],
+        screenshots: ["/mouse-config1.png", "/mouse-config2.png", "/mouse-config3.png", "/mouse-config4.png"],
         objectPos: "30% 40%"
     },
     {
@@ -78,7 +78,7 @@ const en: SetupItem[] = [
         img: "/teclado.webp",
         desc: "Aluminum MagMech (TMR) hybrid keyboard with 0.125ms latency (0.611ms real), 8000Hz polling rate, and 3 connection types. It's the most versatile keyboard that currently exists. It comes by default with PBT keycaps and Womier Void magnetic switches.",
         link: "https://amzn.to/4bUkGo1",
-        screenshots: ["/teclado-config1.webp", "/teclado-config2.webp", "/teclado-config3.webp"]
+        screenshots: ["/teclado-config1.png", "/teclado-config2.png", "/teclado-config3.png"]
     },
     {
         name: "Artisan FX Zero Soft - L",
@@ -121,7 +121,7 @@ const en: SetupItem[] = [
         desc: "A keypad with Rapid Trigger magnetic switches that I used to use before buying my Womier keyboard (from 2023 to 2025). The switches I used to play with were the default ones (Outemu Red) and then the pink Outemu switches. It wasn't until some time later that I upgraded to the Raptor HE switches. The best budget option if you don't already have a Rapid Trigger keyboard or keypad for osu.",
         link: "https://amzn.to/4hDPcWY",
         aliexpress: "https://s.click.aliexpress.com/e/_c4qNAWex",
-        screenshots: ["/keypad-config.webp"],
+        screenshots: ["/keypad-config.png"],
         objectPos: "30% 30%"
     }
 ];

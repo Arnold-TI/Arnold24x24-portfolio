@@ -17,6 +17,7 @@ export default function SkinCard({ skin, previewActive, onCardClick }: SkinCardP
         const video = videoRef.current;
         if (!video) return;
         if (previewActive) {
+            if (video.readyState === 0) video.load();
             video.play().catch(() => {});
         } else {
             video.pause();
@@ -39,7 +40,13 @@ export default function SkinCard({ skin, previewActive, onCardClick }: SkinCardP
             <div
                 onClick={() => onCardClick(skin)}
                 className="w-full cursor-pointer overflow-hidden border-2 border-slate-800/50 group-hover:border-slate-500 transition-colors duration-500 relative shadow-lg bg-[#050b14] aspect-21/9 rounded-lg"
-                onMouseEnter={() => videoRef.current?.play()}
+                onMouseEnter={() => {
+                    const v = videoRef.current;
+                    if (v) {
+                        if (v.readyState === 0) v.load();
+                        v.play().catch(() => {});
+                    }
+                }}
                 onMouseLeave={() => {
                     if (videoRef.current && !previewActive) {
                         videoRef.current.pause();
@@ -54,7 +61,7 @@ export default function SkinCard({ skin, previewActive, onCardClick }: SkinCardP
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className={`object-cover z-20 transition-opacity duration-500 grayscale-25 group-hover:grayscale-0 ${previewActive ? 'opacity-0' : 'group-hover:opacity-0'}`}
                 />
-                <video ref={videoRef} src={skin.video} loop muted playsInline preload="metadata" poster={skin.img} className="absolute inset-0 w-full h-full object-cover z-10 grayscale-25 group-hover:grayscale-0" />
+                <video ref={videoRef} src={skin.video} loop muted playsInline preload="none" poster={skin.img} className="absolute inset-0 w-full h-full object-cover z-10 grayscale-25 group-hover:grayscale-0" />
             </div>
 
             <a href={skin.link} target="_blank" rel="noopener noreferrer" className="mt-4 text-slate-300 font-bold text-center underline decoration-1 decoration-transparent hover:decoration-slate-400 hover:text-white transition-all duration-300 px-2 text-sm md:text-base">
